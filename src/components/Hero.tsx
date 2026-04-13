@@ -21,7 +21,7 @@ const Hero = () => {
         <p className="font-script text-2xl sm:text-3xl md:text-4xl text-foreground/80 mt-6">
           For the youth – By the youth
         </p>
-        <p className="text-primary text-sm sm:text-base font-semibold tracking-[0.3em] mt-4">
+        <p className="font-heading text-primary text-sm sm:text-base font-normal tracking-[0.3em] mt-4">
           EST. 2001
         </p>
         <div className="mt-4 mx-auto w-48 h-px border-t border-gold-gradient" />
