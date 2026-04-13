@@ -104,51 +104,58 @@ const Programs = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {upcomingEvents.slice(0, 4).map((event, i) => (
-              <div
-                key={i}
-                className="flex flex-col bg-card border border-border rounded-lg overflow-hidden interactive-card text-center"
-              >
-                {/* Date badge */}
-                <div className="flex flex-col items-center justify-center bg-primary/10 px-5 py-5">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">
-                    {event.weekday}
-                  </span>
-                  <span className="text-3xl font-bold text-foreground leading-tight">
-                    {event.month} {event.day}
-                  </span>
-                </div>
-
-                {/* Event details */}
-                <div className="flex flex-col items-center px-4 py-4 flex-1">
-                  <h3 className="font-heading text-base font-bold text-foreground">
-                    {event.title}
-                  </h3>
-                  <div className="flex flex-col gap-1.5 mt-2 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1.5 justify-center">
-                      <Clock className="h-3.5 w-3.5" />
-                      {event.time}
+            {upcomingEvents.slice(0, 4).map((event, i) => {
+              const Wrapper = event.linkUrl ? 'a' : 'div';
+              const wrapperProps = event.linkUrl
+                ? { href: event.linkUrl, target: "_blank" as const, rel: "noopener noreferrer" }
+                : {};
+              return (
+                <Wrapper
+                  key={i}
+                  {...wrapperProps}
+                  className="flex flex-col bg-card border border-border rounded-lg overflow-hidden interactive-card text-center cursor-pointer"
+                >
+                  {/* Date badge */}
+                  <div className="flex flex-col items-center justify-center bg-primary/10 px-5 py-5">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-primary">
+                      {event.weekday}
                     </span>
-                    {event.locationUrl ? (
-                      <a
-                        href={event.locationUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 justify-center hover:text-primary transition-colors"
-                      >
-                        <MapPin className="h-3.5 w-3.5" />
-                        {event.location}
-                      </a>
-                    ) : (
-                      <span className="flex items-center gap-1.5 justify-center">
-                        <MapPin className="h-3.5 w-3.5" />
-                        {event.location}
-                      </span>
-                    )}
+                    <span className="text-3xl font-bold text-foreground leading-tight">
+                      {event.month} {event.day}
+                    </span>
                   </div>
-                </div>
-              </div>
-            ))}
+
+                  {/* Event details */}
+                  <div className="flex flex-col items-center px-4 py-4 flex-1">
+                    <h3 className="font-heading text-base font-bold text-foreground">
+                      {event.title}
+                    </h3>
+                    <div className="flex flex-col gap-1.5 mt-2 text-sm text-muted-foreground">
+                      <span className="flex items-center gap-1.5 justify-center">
+                        <Clock className="h-3.5 w-3.5" />
+                        {event.time}
+                      </span>
+                      {event.locationUrl ? (
+                        <a
+                          href={event.locationUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 justify-center hover:text-primary transition-colors"
+                        >
+                          <MapPin className="h-3.5 w-3.5" />
+                          {event.location}
+                        </a>
+                      ) : (
+                        <span className="flex items-center gap-1.5 justify-center">
+                          <MapPin className="h-3.5 w-3.5" />
+                          {event.location}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </Wrapper>
+              );
+            })}
           </div>
         </div>
       </div>
