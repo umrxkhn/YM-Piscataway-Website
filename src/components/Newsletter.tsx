@@ -43,20 +43,22 @@ const Newsletter = () => {
         <p className="text-muted-foreground max-w-xl mx-auto mt-4 text-lg">
           Subscribe to get updates on upcoming events, programs, and community news delivered to your inbox
         </p>
-        <form onSubmit={handleSubscribe} className="flex gap-2 max-w-md mx-auto mt-8">
-          <Input
-            type="email"
-            placeholder="Your email address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            maxLength={255}
-            className="flex-1"
-          />
-          <Button type="submit" disabled={isSubmitting} className="bg-gold-gradient text-primary-foreground hover:opacity-90">
-            <Send className="w-4 h-4 mr-2" />
-            {isSubmitting ? "Subscribing..." : "Subscribe"}
-          </Button>
-        </form>
+        <div className="max-w-md mx-auto mt-8 border border-border rounded-xl p-6 bg-card interactive-card">
+          <form onSubmit={handleSubscribe} className="flex gap-2">
+            <Input
+              type="email"
+              placeholder="Your email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              maxLength={255}
+              className="flex-1"
+            />
+            <Button type="submit" disabled={isSubmitting} className="bg-gold-gradient text-primary-foreground hover:opacity-90">
+              <Send className="w-4 h-4 mr-2" />
+              {isSubmitting ? "Subscribing..." : "Subscribe"}
+            </Button>
+          </form>
+        </div>
       </div>
     </section>
   );
