@@ -16,7 +16,7 @@ export default {
       fontFamily: {
         heading: ['"Computer Modern Serif"', 'serif'],
         body: ['Inter', 'sans-serif'],
-        script: ['"Dancing Script"', 'cursive'],
+        script: ['"Great Vibes"', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
