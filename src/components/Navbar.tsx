@@ -27,7 +27,7 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-        <a href="#home" className="font-heading text-xl font-bold text-primary tracking-wider transition-all duration-200 hover:scale-105 hover:drop-shadow-[0_0_12px_hsl(43_80%_50%/0.6)] md:absolute md:left-1/2 md:-translate-x-1/2">
+        <a href="#home" className="font-heading text-xl font-bold text-primary tracking-wider transition-all duration-200 hover:scale-105 hover:drop-shadow-[0_0_12px_hsl(43_80%_50%/0.6)] absolute left-1/2 -translate-x-1/2">
           YM Piscataway
         </a>
         <div className="hidden md:flex items-center gap-4">
