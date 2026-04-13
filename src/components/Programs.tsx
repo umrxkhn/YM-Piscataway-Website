@@ -42,7 +42,7 @@ const upcomingEvents = [
   {
     title: "Friday Halaqa",
     date: "Apr 25, 2026",
-    time: "7:00 PM",
+    time: "5:30 PM",
     location: "Masjid Al-Huda",
     day: "25",
     month: "Apr",
