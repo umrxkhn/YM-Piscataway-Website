@@ -4,22 +4,22 @@ const pillars = [
   {
     icon: Users,
     title: "Companionship",
-    desc: "Halaqas, sports nights, retreats & conferences that build lasting brotherhood.",
+    desc: "Halaqas, sports nights, retreats & conferences that build lasting brotherhood",
   },
   {
     icon: Heart,
     title: "Mentorship",
-    desc: "Leadership workshops, career guidance, and one-on-one mentoring.",
+    desc: "Leadership workshops, career guidance, and one-on-one mentoring",
   },
   {
     icon: BookOpen,
     title: "Education",
-    desc: "Islamic studies, professional development, and community learning circles.",
+    desc: "Islamic studies, professional development, and community learning circles",
   },
   {
     icon: HandHelping,
     title: "Service",
-    desc: "Feeding the hungry, relief work, and local volunteering efforts.",
+    desc: "Feeding the hungry, relief work, and local volunteering efforts",
   },
 ];
 
@@ -32,7 +32,7 @@ const About = () => {
         </h2>
         <p className="text-muted-foreground text-center max-w-2xl mx-auto mt-4 text-lg">
           We strive to empower Muslim youth to become the leaders of tomorrow through
-          companionship, mentorship, education, and service.
+          companionship, mentorship, education, and service
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
           {pillars.map((p) => (

@@ -8,7 +8,7 @@ const Contact = () => {
           Get In Touch
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto mt-4 text-lg">
-          Want to join or learn more? Reach out to our coordinator.
+          Want to join or learn more? Reach out to our coordinator
         </p>
         <div className="inline-flex flex-col items-center mt-6 px-8 py-5 rounded-lg border border-primary/30 bg-primary/5 gap-3 interactive-card">
           <div>

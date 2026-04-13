@@ -1,19 +1,19 @@
 const programs = [
   {
     title: "Weekly Halaqas",
-    desc: "Gather weekly on Fridays for inclusive sports, engaging prayer, interactive islamic discussions, and amazing food while increasing our spiritual growth in a welcoming environment.",
+    desc: "Gather weekly on Fridays for inclusive sports, engaging prayer, interactive Islamic discussions, and amazing food while increasing our spiritual growth in a welcoming environment",
   },
   {
     title: "Sports",
-    desc: "Basketball, soccer, spikeball, and more whilst staying active while building brotherhood, strengthening teamwork, and having fun with others together every week.",
+    desc: "Basketball, soccer, spikeball, and more whilst staying active while building brotherhood, strengthening teamwork, and having fun with others together every week",
   },
   {
     title: "Retreats & Trips",
-    desc: "Our annual ICNA YMC Convention & Weekend Camp Retreat featuring additional activities  that strengthen bonds, build lasting friendships, and create unforgettable memories together.",
+    desc: "Our annual ICNA YMC Convention & Weekend Camp Retreat featuring additional activities that strengthen bonds, build lasting friendships, and create unforgettable memories together",
   },
   {
     title: "Community Service",
-    desc: "Give back through our weekly food drives, volunteering in various mosques, and local outreach that makes a real difference in our community and beyond, inspiring others to serve.",
+    desc: "Give back through our weekly food drives, volunteering in various mosques, and local outreach that makes a real difference in our community and beyond, inspiring others to serve",
   },
 ];
 
@@ -25,7 +25,7 @@ const Programs = () => {
           Our Programs
         </h2>
         <p className="text-muted-foreground text-center max-w-2xl mx-auto mt-4 text-lg">
-          From weekly gatherings to annual retreats, there's always something happening at YM Piscataway.
+          From weekly gatherings to annual retreats, there's always something happening at YM Piscataway
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-4xl mx-auto">
           {programs.map((p) => (
