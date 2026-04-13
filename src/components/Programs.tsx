@@ -31,7 +31,7 @@ const upcomingEvents = [
   {
     title: "Basketball Night",
     date: "Apr 20, 2026",
-    time: "6:00 PM",
+    time: "1:30 PM",
     location: "Piscataway Community Center",
     day: "20",
     month: "Apr",
