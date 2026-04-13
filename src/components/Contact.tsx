@@ -1,0 +1,32 @@
+import { Mail, MapPin, Instagram } from "lucide-react";
+
+const Contact = () => {
+  return (
+    <section id="contact" className="py-24 bg-secondary">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="font-heading text-3xl sm:text-4xl font-bold text-gold-gradient">
+          Get In Touch
+        </h2>
+        <p className="text-muted-foreground max-w-xl mx-auto mt-4 text-lg">
+          Want to join or learn more? Reach out to us — we'd love to hear from you.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-8 justify-center mt-12">
+          <div className="flex items-center gap-3 text-foreground/80">
+            <MapPin className="w-5 h-5 text-primary" />
+            <span>Piscataway, NJ</span>
+          </div>
+          <a href="mailto:ympiscataway@gmail.com" className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors">
+            <Mail className="w-5 h-5 text-primary" />
+            <span>ympiscataway@gmail.com</span>
+          </a>
+          <a href="https://instagram.com/ympiscataway" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors">
+            <Instagram className="w-5 h-5 text-primary" />
+            <span>@ympiscataway</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
