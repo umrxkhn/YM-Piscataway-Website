@@ -128,7 +128,7 @@ const Programs = () => {
                       </span>
                       {"locationUrl" in event && event.locationUrl ? (
                         <span
-                          className="flex items-center gap-1.5 justify-center hover:text-primary transition-colors cursor-pointer"
+                          className="flex items-center gap-1.5 justify-center hover:text-foreground transition-colors cursor-pointer"
                           onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
