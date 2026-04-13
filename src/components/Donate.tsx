@@ -50,7 +50,7 @@ const Donate = () => {
               <h3 className="font-heading text-xl font-bold text-primary">
                 {method.name}
               </h3>
-              <p className="text-muted-foreground">{method.details}</p>
+              <p className="text-muted-foreground transition-colors hover:text-foreground">{method.details}</p>
             </div>
           ))}
         </div>
