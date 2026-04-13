@@ -4,7 +4,7 @@ const pillars = [
   {
     icon: Users,
     title: "Companionship",
-    desc: "Halaqas, sports nights, retreats & conferences that build lasting brotherhood",
+    desc: "Halaqas, sports, retreats & conferences that build lasting brotherhood",
   },
   {
     icon: Heart,

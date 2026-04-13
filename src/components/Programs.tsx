@@ -11,7 +11,7 @@ const programs = [
   },
   {
     title: "Retreats & Trips",
-    desc: "Our annual ICNA YMC Convention & Weekend Camp Retreat featuring additional activities that strengthen bonds, build lasting friendships, and create unforgettable memories together",
+    desc: "Our annual ICNA YMC Confrence & Weekend Camp Retreat featuring additional activities that strengthen bonds, build lasting friendships, and create unforgettable memories together",
   },
   {
     title: "Community Service",
