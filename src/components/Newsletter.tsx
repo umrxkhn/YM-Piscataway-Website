@@ -53,7 +53,7 @@ const Newsletter = () => {
               maxLength={255}
               className="flex-1"
             />
-            <Button type="submit" disabled={isSubmitting} className="bg-gold-gradient text-primary-foreground hover:opacity-90">
+            <Button type="submit" disabled={isSubmitting} variant="outline" className="border-border text-foreground hover:bg-muted">
               <Send className="w-4 h-4 mr-2" />
               {isSubmitting ? "Subscribing..." : "Subscribe"}
             </Button>
