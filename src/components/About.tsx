@@ -38,7 +38,7 @@ const About = () => {
           {pillars.map((p) => (
             <div
               key={p.title}
-              className="bg-card rounded-lg p-8 text-center border border-border hover:border-primary/40 transition-colors group"
+              className="bg-card rounded-lg p-8 text-center border border-border interactive-card group"
             >
               <div className="w-14 h-14 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                 <p.icon className="w-7 h-7 text-primary" />
