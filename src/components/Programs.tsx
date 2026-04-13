@@ -40,10 +40,11 @@ const upcomingEvents = [
     weekday: "Sunday",
   },
   {
-    title: "Friday Halaqa",
+    title: "YM Reunion",
     date: "Apr 25, 2026",
     time: "5:30 PM",
     location: "TBD",
+    linkUrl: "https://www.instagram.com/ym.piscataway.brothers/p/DXFh_QCEc0s/",
     day: "25",
     month: "Apr",
     weekday: "Friday",
