@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Computer Modern Serif"', 'serif'],
+        heading: ['"Playfair Display"', 'serif'],
         body: ['Inter', 'sans-serif'],
         script: ['"Dancing Script"', 'cursive'],
       },
