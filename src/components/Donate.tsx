@@ -19,12 +19,9 @@ const Donate = () => {
   return (
     <section id="donate" className="py-20 px-4 bg-black">
       <div className="container mx-auto max-w-2xl text-center">
-        <div className="inline-flex items-center gap-2 mb-6">
-          <Heart className="text-primary w-8 h-8" />
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground">
-            Donate
-          </h2>
-        </div>
+        <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+          Donate
+        </h2>
         <p className="text-muted-foreground text-lg mb-12">
           Your generous contributions help us continue serving the community
         </p>
