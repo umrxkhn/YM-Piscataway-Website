@@ -41,11 +41,12 @@ const StayConnected = () => {
           Check out our latest events and highlights on Instagram
         </p>
 
-        <div className="flex items-center justify-center mt-8 mb-10">
-          <div className="flex items-center gap-4 border border-border rounded-xl px-6 py-4 bg-card">
-            <img src={instagramLogo} alt="Instagram" className="w-16 h-16 object-contain" loading="lazy" width={512} height={512} />
-            <h3 className="font-heading text-2xl font-bold text-foreground">@ym.piscataway.brothers</h3>
-          </div>
+        <div className="flex flex-col items-center mt-8 mb-10 gap-2">
+          <a href="https://www.instagram.com/ym.piscataway.brothers/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 border border-border rounded-xl px-5 py-3 bg-card hover:border-primary transition-colors">
+            <img src={instagramLogo} alt="Instagram" className="w-10 h-10 object-contain" loading="lazy" width={512} height={512} />
+            <h3 className="font-heading text-lg font-bold text-foreground">@ym.piscataway.brothers</h3>
+          </a>
+          <p className="text-muted-foreground text-sm">Click to view full feed</p>
         </div>
 
         {/* Instagram Embeds Grid */}
