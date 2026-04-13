@@ -7,13 +7,13 @@ const Contact = () => {
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-gold-gradient">
           Get In Touch
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto mt-4 text-lg">
+        <p className="text-muted-foreground max-w-xl mx-auto mt-6 text-lg">
           Want to join or learn more? Reach out to our coordinator.
         </p>
-        <p className="text-foreground font-bold text-xl mt-3">
+        <p className="text-foreground font-bold text-xl mt-2">
           Maaz Motiwala
         </p>
-        <div className="flex flex-col sm:flex-row gap-8 justify-center mt-12">
+        <div className="flex flex-col sm:flex-row gap-8 justify-center mt-8">
           <a href="mailto:ympiscataway@gmail.com" className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors">
             <Mail className="w-5 h-5 text-primary" />
             <span>ympiscataway@gmail.com</span>
