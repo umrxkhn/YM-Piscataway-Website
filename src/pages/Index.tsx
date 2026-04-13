@@ -18,7 +18,6 @@ const Index = () => {
       <StayConnected />
       <Newsletter />
       <Donate />
-      <Donate />
       <Contact />
       <Footer />
     </div>
