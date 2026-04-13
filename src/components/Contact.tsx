@@ -13,7 +13,7 @@ const Contact = () => {
         <div className="inline-flex flex-col items-center mt-6 px-8 py-5 rounded-lg border border-primary/30 bg-primary/5 gap-3">
           <div>
             <p className="text-foreground font-bold text-xl">Maaz Motiwala</p>
-            <p className="text-muted-foreground text-sm">YM Piscataway Coordinator</p>
+            <p className="text-primary text-sm">YM Piscataway Coordinator</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="mailto:maaz.motiwala@youngmuslims.com" className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors text-sm">
