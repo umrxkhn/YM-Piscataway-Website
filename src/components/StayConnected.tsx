@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Instagram, Mail, Send } from "lucide-react";
+import { Instagram, Mail, Send, ExternalLink } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -44,37 +44,63 @@ const StayConnected = () => {
           Follow us on Instagram and subscribe to our newsletter to stay up to date.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 max-w-4xl mx-auto">
-          {/* Instagram */}
-          <div className="bg-card border border-border rounded-lg p-8 text-center interactive-card">
-            <div className="w-14 h-14 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-5">
-              <Instagram className="w-7 h-7 text-primary" />
+        <div className="max-w-2xl mx-auto mt-12 space-y-8">
+          {/* Instagram Section */}
+          <div className="bg-card border border-border rounded-lg p-8 interactive-card">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Instagram className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-heading text-lg font-bold text-foreground">@ympiscataway</h3>
+                <p className="text-muted-foreground text-xs">Follow us on Instagram</p>
+              </div>
             </div>
-            <h3 className="font-heading text-xl font-bold text-foreground">Follow Us</h3>
-            <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
-              Check out our latest events, highlights, and behind-the-scenes on Instagram.
-            </p>
+
+            {/* Recent posts grid */}
+            <div className="grid grid-cols-3 gap-3 mb-6">
+              {[1, 2, 3].map((i) => (
+                <a
+                  key={i}
+                  href="https://instagram.com/ympiscataway"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="aspect-square rounded-md bg-muted/50 border border-border flex items-center justify-center hover:border-primary/40 transition-all hover:bg-muted/80 group"
+                >
+                  <div className="text-center">
+                    <Instagram className="w-6 h-6 text-muted-foreground/40 mx-auto group-hover:text-primary/60 transition-colors" />
+                    <p className="text-[10px] text-muted-foreground/40 mt-1 group-hover:text-primary/60 transition-colors">View post</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+
             <a
               href="https://instagram.com/ympiscataway"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-5 bg-gold-gradient text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-gold-gradient text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
             >
-              <Instagram className="w-4 h-4" />
-              @ympiscataway
+              <ExternalLink className="w-4 h-4" />
+              View Full Feed
             </a>
           </div>
 
-          {/* Newsletter */}
-          <div className="bg-card border border-border rounded-lg p-8 text-center interactive-card">
-            <div className="w-14 h-14 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-5">
-              <Mail className="w-7 h-7 text-primary" />
+          {/* Newsletter Section */}
+          <div className="bg-card border border-border rounded-lg p-8 interactive-card">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Mail className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-heading text-lg font-bold text-foreground">Newsletter</h3>
+                <p className="text-muted-foreground text-xs">Get updates on events & programs</p>
+              </div>
             </div>
-            <h3 className="font-heading text-xl font-bold text-foreground">Newsletter</h3>
-            <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
-              Subscribe to get updates on upcoming events, programs, and community news.
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+              Subscribe to get updates on upcoming events, programs, and community news delivered to your inbox.
             </p>
-            <form onSubmit={handleSubscribe} className="flex gap-2 mt-5">
+            <form onSubmit={handleSubscribe} className="flex gap-2">
               <Input
                 type="email"
                 placeholder="Your email address"
