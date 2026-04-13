@@ -18,7 +18,7 @@ const Navbar = () => {
         <a href="#home" className="font-heading text-xl font-bold text-primary tracking-wider">
           YM Piscataway
         </a>
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -28,13 +28,13 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            className="bg-gold-gradient text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
-          >
-            Join Us
-          </a>
         </div>
+        <a
+          href="#contact"
+          className="hidden md:inline-block bg-gold-gradient text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
+        >
+          Join Us
+        </a>
         <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
