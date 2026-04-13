@@ -1,4 +1,4 @@
-import { Mail, MapPin, Instagram } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -8,20 +8,16 @@ const Contact = () => {
           Get In Touch
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto mt-4 text-lg">
-          Want to join or learn more? Reach out to us through our many channels of communication.
+          Want to join or learn more? Reach out to our coordinator, Maaz Motiwala.
         </p>
         <div className="flex flex-col sm:flex-row gap-8 justify-center mt-12">
-          <div className="flex items-center gap-3 text-foreground/80">
-            <MapPin className="w-5 h-5 text-primary" />
-            <span>Piscataway, NJ</span>
-          </div>
           <a href="mailto:ympiscataway@gmail.com" className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors">
             <Mail className="w-5 h-5 text-primary" />
             <span>ympiscataway@gmail.com</span>
           </a>
-          <a href="https://instagram.com/ympiscataway" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors">
-            <Instagram className="w-5 h-5 text-primary" />
-            <span>@ympiscataway</span>
+          <a href="tel:+11234567890" className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors">
+            <Phone className="w-5 h-5 text-primary" />
+            <span>(123) 456-7890</span>
           </a>
         </div>
       </div>
