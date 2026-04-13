@@ -139,7 +139,7 @@ const Programs = () => {
                           {event.location}
                         </span>
                       ) : (
-                        <span className="flex items-center gap-1.5 justify-center">
+                        <span className={`flex items-center gap-1.5 justify-center ${event.location === "TBD" ? "text-primary" : ""}`}>
                           <MapPin className="h-3.5 w-3.5" />
                           {event.location}
                         </span>
