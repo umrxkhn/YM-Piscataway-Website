@@ -5,7 +5,7 @@ const programs = [
   },
   {
     title: "Sports",
-    desc: "Basketball, soccer, and more — staying active while building brotherhood and having fun together.",
+    desc: "Basketball, soccer, volleyball, and more — staying active while building brotherhood, strengthening teamwork, and having fun together every week.",
   },
   {
     title: "Retreats & Trips",
