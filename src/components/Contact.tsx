@@ -8,7 +8,7 @@ const Contact = () => {
           Get In Touch
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto mt-4 text-lg">
-          Want to join or learn more? Reach out to us — we'd love to hear from you.
+          Want to join or learn more? Reach out to us through our many channels of communication
         </p>
         <div className="flex flex-col sm:flex-row gap-8 justify-center mt-12">
           <div className="flex items-center gap-3 text-foreground/80">
