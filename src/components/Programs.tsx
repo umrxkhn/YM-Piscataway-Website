@@ -28,12 +28,11 @@ const Programs = () => {
           From weekly gatherings to annual retreats, there's always something happening at YM Piscataway.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-4xl mx-auto">
-          {programs.map((p, i) => (
+          {programs.map((p) => (
             <div
               key={p.title}
-              className="relative pl-8 border-l-2 border-primary/30 hover:border-primary transition-colors"
+              className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors"
             >
-              <span className="absolute left-[-9px] top-1 w-4 h-4 rounded-full bg-primary" />
               <h3 className="font-heading text-xl font-bold text-foreground">{p.title}</h3>
               <p className="text-muted-foreground mt-2 text-sm leading-relaxed">{p.desc}</p>
             </div>
