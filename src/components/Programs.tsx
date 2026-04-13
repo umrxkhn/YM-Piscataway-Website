@@ -131,7 +131,7 @@ const Programs = () => {
                           onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            window.open(event.locationUrl, "_blank", "noopener,noreferrer");
+                            window.open(event.locationUrl as string, "_blank", "noopener,noreferrer");
                           }}
                         >
                           <MapPin className="h-3.5 w-3.5" />
