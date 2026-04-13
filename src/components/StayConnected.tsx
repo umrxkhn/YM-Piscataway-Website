@@ -1,5 +1,5 @@
 import { Instagram, ExternalLink } from "lucide-react";
-import ymLogo from "@/assets/ym-logo.png";
+import instagramLogo from "@/assets/instagram-logo.png";
 import { useEffect } from "react";
 
 const instagramPosts = [
@@ -42,7 +42,7 @@ const StayConnected = () => {
         </p>
 
         <div className="flex items-center justify-center gap-3 mt-8 mb-10">
-          <img src={ymLogo} alt="YM Piscataway Logo" className="w-12 h-12 rounded-full object-contain bg-background" />
+          <img src={instagramLogo} alt="Instagram" className="w-12 h-12 object-contain" loading="lazy" width={512} height={512} />
           <div>
             <h3 className="font-heading text-xl font-bold text-foreground">@ym.piscataway.brothers</h3>
             
