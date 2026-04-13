@@ -42,7 +42,7 @@ const StayConnected = () => {
         </p>
 
         <div className="flex flex-col items-center mt-8 mb-10 gap-2">
-          <a href="https://www.instagram.com/ym.piscataway.brothers/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 border border-border rounded-xl px-5 py-3 bg-card hover:border-primary transition-colors hover-scale">
+          <a href="https://www.instagram.com/ym.piscataway.brothers/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 border border-border rounded-xl px-5 py-3 bg-card interactive-card">
             <img src={instagramLogo} alt="Instagram" className="w-10 h-10 object-contain" loading="lazy" width={512} height={512} />
             <h3 className="font-heading text-lg font-bold text-foreground">@ym.piscataway.brothers</h3>
           </a>
