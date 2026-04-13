@@ -18,7 +18,6 @@ const programs = [
     desc: "Give back through our weekly food drives, volunteering in various mosques, and local outreach that makes a real difference in our community and beyond, inspiring others to serve",
   },
 ];
-
 const upcomingEvents = [
   {
     title: "Friday Halaqa",
@@ -43,8 +42,7 @@ const upcomingEvents = [
     title: "Basketball Night",
     date: "Apr 20, 2026",
     time: "1:30 PM",
-    location: "Middlebush Park",
-    locationUrl: "https://www.google.com/maps/search/Middlebush+Park+NJ",
+    location: "TBD",
     day: "20",
     month: "Apr",
     weekday: "Sunday",
@@ -133,7 +131,7 @@ const Programs = () => {
                           onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            window.open(event.locationUrl, "_blank", "noopener,noreferrer");
+                            window.open(event.locationUrl as string, "_blank", "noopener,noreferrer");
                           }}
                         >
                           <MapPin className="h-3.5 w-3.5" />
