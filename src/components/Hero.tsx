@@ -24,7 +24,7 @@ const Hero = () => {
         <p className="font-heading text-primary text-base sm:text-lg md:text-xl font-normal tracking-[0.3em] mt-4">
           EST. 2001
         </p>
-        <div className="mt-4 mx-auto w-48 h-px border-t border-gold-gradient" />
+        
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#about"
