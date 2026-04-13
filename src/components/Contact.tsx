@@ -18,7 +18,7 @@ const Contact = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="mailto:maaz.motiwala@youngmuslims.com" className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors text-sm">
               <Mail className="w-4 h-4 text-primary" />
-              <span>maaz.motiwala@youngmuslims.com</span>
+              <span className="font-bold">maaz.motiwala@youngmuslims.com</span>
             </a>
             <a href="tel:+19083402190" className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors text-sm">
               <Phone className="w-4 h-4 text-primary" />
