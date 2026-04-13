@@ -50,12 +50,12 @@ const upcomingEvents = [
   },
   {
     title: "Community Food Drive",
-    date: "Apr 27, 2026",
+    date: "May 8, 2026",
     time: "5:30 PM",
     location: "TBD",
-    day: "27",
-    month: "Apr",
-    weekday: "Sunday",
+    day: "8",
+    month: "May",
+    weekday: "Friday",
   },
   {
     title: "ICNA YMC Convention",
