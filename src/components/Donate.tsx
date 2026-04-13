@@ -4,17 +4,14 @@ const paymentMethods = [
   {
     name: "Zelle",
     details: "Qasim Bishirat — 917-676-7696",
-    icon: "💳",
   },
   {
     name: "Apple Pay",
     details: "Qasim Bishirat — 917-676-7696",
-    icon: "🍎",
   },
   {
     name: "Venmo",
     details: "@YM_Piscataway",
-    icon: "💸",
   },
 ];
 
@@ -48,15 +45,12 @@ const Donate = () => {
           {paymentMethods.map((method) => (
             <div
               key={method.name}
-              className="bg-card border border-border rounded-xl p-6 flex items-center gap-4 text-left transition-colors hover:border-primary/40"
+              className="bg-card border border-border rounded-xl p-6 flex flex-col items-center text-center gap-2 transition-transform duration-200 hover:border-primary/40 hover:-translate-y-2 hover:scale-105"
             >
-              <span className="text-3xl">{method.icon}</span>
-              <div>
-                <h3 className="font-heading text-lg font-semibold text-foreground">
-                  {method.name}
-                </h3>
-                <p className="text-muted-foreground">{method.details}</p>
-              </div>
+              <h3 className="font-heading text-xl font-bold text-foreground">
+                {method.name}
+              </h3>
+              <p className="text-muted-foreground">{method.details}</p>
             </div>
           ))}
         </div>
