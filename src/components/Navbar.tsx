@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Programs", href: "#programs" },
   { label: "Connect", href: "#connect" },
   { label: "Contact", href: "#contact" },
-  { label: "Donate", href: "/donate" },
+  { label: "Donate", href: "#donate" },
 ];
 
 const Navbar = () => {
