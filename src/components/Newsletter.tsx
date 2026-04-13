@@ -38,7 +38,7 @@ const Newsletter = () => {
     <section id="newsletter" className="py-24 bg-background">
       <div className="container mx-auto px-4 text-center">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-gold-gradient">
-          Newsletter
+          Our Newsletter
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto mt-4 text-lg">
           Subscribe to get updates on upcoming events, programs, and community news delivered to your inbox
