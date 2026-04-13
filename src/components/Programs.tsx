@@ -4,7 +4,7 @@ const programs = [
     desc: "Gather every week for engaging Islamic discussions, Quran study, and spiritual growth in a welcoming environment.",
   },
   {
-    title: "Sports Nights",
+    title: "Sports",
     desc: "Basketball, soccer, and more — staying active while building brotherhood and having fun together.",
   },
   {
