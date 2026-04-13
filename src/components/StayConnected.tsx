@@ -1,4 +1,5 @@
 import { Instagram, ExternalLink } from "lucide-react";
+import ymLogo from "@/assets/ym-logo.png";
 import { useEffect } from "react";
 
 const instagramPosts = [
