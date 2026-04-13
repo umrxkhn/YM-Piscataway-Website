@@ -105,16 +105,8 @@ const Programs = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {upcomingEvents.slice(0, 4).map((event, i) => {
-              const Wrapper = event.linkUrl ? 'a' : 'div';
-              const wrapperProps = event.linkUrl
-                ? { href: event.linkUrl, target: "_blank" as const, rel: "noopener noreferrer" }
-                : {};
-              return (
-                <Wrapper
-                  key={i}
-                  {...wrapperProps}
-                  className="flex flex-col bg-card border border-border rounded-lg overflow-hidden interactive-card text-center cursor-pointer"
-                >
+              const cardContent = (
+                <>
                   {/* Date badge */}
                   <div className="flex flex-col items-center justify-center bg-primary/10 px-5 py-5">
                     <span className="text-xs font-semibold uppercase tracking-wider text-primary">
@@ -135,12 +127,13 @@ const Programs = () => {
                         <Clock className="h-3.5 w-3.5" />
                         {event.time}
                       </span>
-                      {event.locationUrl ? (
+                      {"locationUrl" in event && event.locationUrl ? (
                         <a
                           href={event.locationUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-1.5 justify-center hover:text-primary transition-colors"
+                          onClick={(e) => e.stopPropagation()}
                         >
                           <MapPin className="h-3.5 w-3.5" />
                           {event.location}
@@ -153,7 +146,26 @@ const Programs = () => {
                       )}
                     </div>
                   </div>
-                </Wrapper>
+                </>
+              );
+
+              return "linkUrl" in event && event.linkUrl ? (
+                <a
+                  key={i}
+                  href={event.linkUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col bg-card border border-border rounded-lg overflow-hidden interactive-card text-center no-underline"
+                >
+                  {cardContent}
+                </a>
+              ) : (
+                <div
+                  key={i}
+                  className="flex flex-col bg-card border border-border rounded-lg overflow-hidden interactive-card text-center"
+                >
+                  {cardContent}
+                </div>
               );
             })}
           </div>
