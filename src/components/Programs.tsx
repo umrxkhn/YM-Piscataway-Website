@@ -31,7 +31,7 @@ const Programs = () => {
           {programs.map((p) => (
             <div
               key={p.title}
-              className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors text-center"
+              className="bg-card border border-border rounded-lg p-6 interactive-card text-center"
             >
               <h3 className="font-heading text-xl font-bold text-foreground">{p.title}</h3>
               <p className="text-muted-foreground mt-2 text-sm leading-relaxed">{p.desc}</p>
