@@ -41,9 +41,12 @@ const StayConnected = () => {
           Check out our latest events and highlights on Instagram
         </p>
 
-        <div className="flex flex-col items-center justify-center gap-3 mt-8 mb-10">
+        <div className="flex items-center justify-center gap-3 mt-8 mb-10">
           <img src={ymLogo} alt="YM Piscataway Logo" className="w-12 h-12 rounded-full object-cover" />
-          <h3 className="font-heading text-xl font-bold text-foreground">@ym.piscataway.brothers</h3>
+          <div>
+            <h3 className="font-heading text-xl font-bold text-foreground">@ym.piscataway.brothers</h3>
+            <p className="text-muted-foreground text-sm">Follow us on Instagram</p>
+          </div>
         </div>
 
         {/* Instagram Embeds Grid */}
