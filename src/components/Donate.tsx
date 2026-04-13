@@ -20,7 +20,7 @@ const paymentMethods = [
 
 const Donate = () => {
   return (
-    <section id="donate" className="py-20 px-4">
+    <section id="donate" className="py-20 px-4 bg-muted/50">
       <div className="container mx-auto max-w-2xl text-center">
         <div className="inline-flex items-center gap-2 mb-6">
           <Heart className="text-primary w-8 h-8" />
