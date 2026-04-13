@@ -128,16 +128,17 @@ const Programs = () => {
                         {event.time}
                       </span>
                       {"locationUrl" in event && event.locationUrl ? (
-                        <a
-                          href={event.locationUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 justify-center hover:text-primary transition-colors"
-                          onClick={(e) => e.stopPropagation()}
+                        <span
+                          className="flex items-center gap-1.5 justify-center hover:text-primary transition-colors cursor-pointer"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            window.open(event.locationUrl, "_blank", "noopener,noreferrer");
+                          }}
                         >
                           <MapPin className="h-3.5 w-3.5" />
                           {event.location}
-                        </a>
+                        </span>
                       ) : (
                         <span className="flex items-center gap-1.5 justify-center">
                           <MapPin className="h-3.5 w-3.5" />
