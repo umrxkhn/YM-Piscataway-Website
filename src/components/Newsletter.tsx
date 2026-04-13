@@ -44,7 +44,7 @@ const Newsletter = () => {
           Newsletter
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto mt-4 text-lg">
-          Subscribe to get updates on upcoming events, programs, and community news delivered to your inbox.
+          Subscribe to get updates on upcoming events, programs, and community news delivered to your inbox
         </p>
         <form onSubmit={handleSubscribe} className="flex gap-2 max-w-md mx-auto mt-8">
           <Input
