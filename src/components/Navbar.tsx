@@ -16,9 +16,6 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
         <a href="#home" className="font-heading text-xl font-bold text-primary tracking-wider transition-all duration-200 hover:scale-105 hover:drop-shadow-[0_0_12px_hsl(43_80%_50%/0.6)] absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
           YM Piscataway
         </a>
@@ -39,6 +36,9 @@ const Navbar = () => {
         >
           Join Us
         </a>
+        <button className="md:hidden text-foreground ml-auto" onClick={() => setOpen(!open)}>
+          {open ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
       {open && (
         <div className="md:hidden bg-background border-t border-border px-4 pb-4 space-y-3">
