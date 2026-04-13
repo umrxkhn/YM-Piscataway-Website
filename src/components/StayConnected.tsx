@@ -46,7 +46,7 @@ const StayConnected = () => {
             <img src={instagramLogo} alt="Instagram" className="w-10 h-10 object-contain" loading="lazy" width={512} height={512} />
             <h3 className="font-heading text-lg font-bold text-foreground">@ym.piscataway.brothers</h3>
           </a>
-          <p className="text-muted-foreground text-sm">Click to view full feed</p>
+          <a href="https://www.instagram.com/ym.piscataway.brothers/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary transition-colors">Click to view full feed</a>
         </div>
 
         {/* Instagram Embeds Grid */}
