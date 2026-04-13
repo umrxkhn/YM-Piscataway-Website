@@ -41,11 +41,10 @@ const StayConnected = () => {
           Check out our latest events and highlights on Instagram
         </p>
 
-        <div className="flex items-center justify-center gap-3 mt-8 mb-10">
-          <img src={instagramLogo} alt="Instagram" className="w-12 h-12 object-contain" loading="lazy" width={512} height={512} />
-          <div>
-            <h3 className="font-heading text-xl font-bold text-foreground">@ym.piscataway.brothers</h3>
-            
+        <div className="flex items-center justify-center mt-8 mb-10">
+          <div className="flex items-center gap-4 border border-border rounded-xl px-6 py-4 bg-card">
+            <img src={instagramLogo} alt="Instagram" className="w-16 h-16 object-contain" loading="lazy" width={512} height={512} />
+            <h3 className="font-heading text-2xl font-bold text-foreground">@ym.piscataway.brothers</h3>
           </div>
         </div>
 
