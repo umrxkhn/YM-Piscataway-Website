@@ -1,7 +1,7 @@
 const programs = [
   {
     title: "Weekly Halaqas",
-    desc: "Gather weekly on Fridays for inclusive sports, engaging prayer, interactive Islamic discussions, and amazing food while increasing our spiritual growth in a welcoming environment",
+    desc: "Gather weekly on Fridays for inclusive sports, engaging prayer, interactive islamic discussions, and amazing food while increasing our spiritual growth in a welcoming environment",
   },
   {
     title: "Sports",
