@@ -88,12 +88,13 @@
   }
 
   .interactive-card:hover {
+    transform: translateY(-6px);
     box-shadow: 0 0 20px 2px hsl(var(--primary) / 0.2);
     @apply border-primary/50;
   }
 
   .interactive-card:active {
-    transform: scale(0.96);
+    transform: translateY(-2px) scale(0.97);
     box-shadow: 0 0 25px 4px hsl(var(--primary) / 0.3);
   }
 }
