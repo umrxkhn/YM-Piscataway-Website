@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
         <a
           href="#contact"
-          className="bg-gold-gradient text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold"
+          className="bg-gold-gradient text-primary-foreground px-3 py-1.5 rounded-md text-xs font-semibold md:px-5 md:py-2 md:text-sm"
         >
           Join Us
         </a>
