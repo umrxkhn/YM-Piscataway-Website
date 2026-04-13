@@ -12,7 +12,7 @@ const Contact = () => {
         </p>
         <div className="inline-block mt-4 px-6 py-3 rounded-lg border border-primary/30 bg-primary/5">
           <p className="text-foreground font-bold text-xl">Maaz Motiwala</p>
-          <p className="text-muted-foreground text-sm">Coordinator</p>
+          <p className="text-muted-foreground text-sm">YM Piscataway Coordinator</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-8 justify-center mt-4">
           <a href="mailto:ympiscataway@gmail.com" className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors">
