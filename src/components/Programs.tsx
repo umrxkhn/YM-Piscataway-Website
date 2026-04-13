@@ -96,33 +96,33 @@ const Programs = () => {
             Mark your calendars and join us at our next events
           </p>
 
-          <div className="max-w-3xl mx-auto space-y-4">
-            {upcomingEvents.map((event, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {upcomingEvents.slice(0, 4).map((event, i) => (
               <div
                 key={i}
-                className="flex items-stretch bg-card border border-border rounded-lg overflow-hidden interactive-card"
+                className="flex flex-col bg-card border border-border rounded-lg overflow-hidden interactive-card text-center"
               >
                 {/* Date badge */}
-                <div className="flex flex-col items-center justify-center bg-primary/10 px-5 py-4 min-w-[80px]">
+                <div className="flex flex-col items-center justify-center bg-primary/10 px-5 py-5">
                   <span className="text-xs font-semibold uppercase tracking-wider text-primary">
                     {event.month}
                   </span>
-                  <span className="text-2xl font-bold text-foreground leading-tight">
+                  <span className="text-3xl font-bold text-foreground leading-tight">
                     {event.day}
                   </span>
                 </div>
 
                 {/* Event details */}
-                <div className="flex flex-col justify-center px-5 py-4 flex-1">
-                  <h3 className="font-heading text-lg font-bold text-foreground">
+                <div className="flex flex-col items-center px-4 py-4 flex-1">
+                  <h3 className="font-heading text-base font-bold text-foreground">
                     {event.title}
                   </h3>
-                  <div className="flex flex-wrap gap-4 mt-1.5 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1.5">
+                  <div className="flex flex-col gap-1.5 mt-2 text-sm text-muted-foreground">
+                    <span className="flex items-center gap-1.5 justify-center">
                       <Clock className="h-3.5 w-3.5" />
                       {event.time}
                     </span>
-                    <span className="flex items-center gap-1.5">
+                    <span className="flex items-center gap-1.5 justify-center">
                       <MapPin className="h-3.5 w-3.5" />
                       {event.location}
                     </span>
