@@ -160,7 +160,8 @@ const Programs = () => {
                   href={event.linkUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col bg-card border border-border rounded-lg overflow-hidden interactive-card text-center no-underline"
+                  className="flex flex-col bg-card border border-border rounded-lg overflow-hidden interactive-card text-center no-underline text-inherit"
+                  style={{ color: "inherit", textDecoration: "none" }}
                 >
                   {cardContent}
                 </a>
