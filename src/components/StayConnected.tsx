@@ -45,7 +45,7 @@ const StayConnected = () => {
           <img src={ymLogo} alt="YM Piscataway Logo" className="w-12 h-12 rounded-full object-cover" />
           <div>
             <h3 className="font-heading text-xl font-bold text-foreground">@ym.piscataway.brothers</h3>
-            <p className="text-muted-foreground text-sm">Follow us on Instagram</p>
+            
           </div>
         </div>
 
