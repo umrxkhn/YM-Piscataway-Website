@@ -34,7 +34,7 @@ const Hero = () => {
           </a>
           <a
             href="#contact"
-            className="border border-primary text-primary px-8 py-3 rounded-md font-semibold hover:bg-primary/10 transition-colors"
+            className="border border-primary text-primary px-8 py-3 rounded-md font-semibold transition-all duration-200 hover:bg-primary/10 hover:scale-105 hover:shadow-[0_0_20px_2px_hsl(43_80%_50%/0.4)]"
           >
             Get Involved
           </a>
