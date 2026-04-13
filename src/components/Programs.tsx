@@ -27,6 +27,7 @@ const upcomingEvents = [
     location: "TBD",
     day: "18",
     month: "Apr",
+    weekday: "Friday",
   },
   {
     title: "Basketball Night",
@@ -36,6 +37,7 @@ const upcomingEvents = [
     locationUrl: "https://www.google.com/maps/search/Middlebush+Park+NJ",
     day: "20",
     month: "Apr",
+    weekday: "Sunday",
   },
   {
     title: "Friday Halaqa",
@@ -44,6 +46,7 @@ const upcomingEvents = [
     location: "Masjid Al-Huda",
     day: "25",
     month: "Apr",
+    weekday: "Friday",
   },
   {
     title: "Community Food Drive",
@@ -52,6 +55,7 @@ const upcomingEvents = [
     location: "Downtown Piscataway",
     day: "27",
     month: "Apr",
+    weekday: "Sunday",
   },
   {
     title: "ICNA YMC Convention",
@@ -60,6 +64,7 @@ const upcomingEvents = [
     location: "Baltimore, MD",
     day: "23",
     month: "May",
+    weekday: "Saturday",
   },
 ];
 
@@ -106,10 +111,10 @@ const Programs = () => {
                 {/* Date badge */}
                 <div className="flex flex-col items-center justify-center bg-primary/10 px-5 py-5">
                   <span className="text-xs font-semibold uppercase tracking-wider text-primary">
-                    {event.month}
+                    {event.weekday}
                   </span>
                   <span className="text-3xl font-bold text-foreground leading-tight">
-                    {event.day}
+                    {event.month} {event.day}
                   </span>
                 </div>
 
