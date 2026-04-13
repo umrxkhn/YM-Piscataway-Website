@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Playfair Display"', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['Cinzel', 'serif'],
+        body: ['Barlow', 'sans-serif'],
         script: ['"Dancing Script"', 'cursive'],
       },
       colors: {
