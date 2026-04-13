@@ -9,7 +9,7 @@ const programs = [
   },
   {
     title: "Retreats & Trips",
-    desc: "Outdoor adventures and overnight retreats that strengthen bonds and create unforgettable memories.",
+    desc: "Outdoor adventures, overnight retreats, and exciting trips that strengthen bonds, build lasting friendships, and create unforgettable memories together.",
   },
   {
     title: "Community Service",
