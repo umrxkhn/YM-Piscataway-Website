@@ -12,7 +12,7 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-background/75" />
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl font-black tracking-tight text-gold-gradient leading-tight">
+        <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl font-normal tracking-tight text-gold-gradient leading-tight">
           YOUNG MUSLIMS
         </h1>
         <p className="font-heading text-3xl sm:text-5xl md:text-6xl font-bold text-foreground mt-2 tracking-wide">
