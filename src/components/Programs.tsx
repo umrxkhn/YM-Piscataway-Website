@@ -52,7 +52,7 @@ const upcomingEvents = [
     title: "Community Food Drive",
     date: "Apr 27, 2026",
     time: "10:00 AM",
-    location: "Downtown Piscataway",
+    location: "TBD",
     day: "27",
     month: "Apr",
     weekday: "Sunday",
