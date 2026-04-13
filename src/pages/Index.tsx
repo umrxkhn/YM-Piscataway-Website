@@ -17,6 +17,9 @@ const Index = () => {
       <Programs />
       <StayConnected />
       <Newsletter />
+      <div className="container mx-auto px-4">
+        <hr className="border-border" />
+      </div>
       <Donate />
       <Contact />
       <Footer />
