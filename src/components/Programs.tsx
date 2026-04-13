@@ -18,7 +18,6 @@ const programs = [
     desc: "Give back through our weekly food drives, volunteering in various mosques, and local outreach that makes a real difference in our community and beyond, inspiring others to serve",
   },
 ];
-
 const upcomingEvents = [
   {
     title: "Friday Halaqa",
