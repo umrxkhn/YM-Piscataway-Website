@@ -70,18 +70,6 @@ const StayConnected = () => {
             </div>
           ))}
         </div>
-
-        <div className="text-center mt-10">
-          <a
-            href="https://instagram.com/ym.piscataway.brothers"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gold-gradient text-primary-foreground px-6 py-3 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
-          >
-            <ExternalLink className="w-4 h-4" />
-            View Full Feed on Instagram
-          </a>
-        </div>
       </div>
     </section>
   );
