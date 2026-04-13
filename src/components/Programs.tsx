@@ -145,6 +145,11 @@ const Programs = () => {
                         </span>
                       )}
                     </div>
+                    {"linkUrl" in event && event.linkUrl && (
+                      <span className="mt-3 text-xs font-semibold text-primary hover:underline">
+                        Click to learn more →
+                      </span>
+                    )}
                   </div>
                 </>
               );
