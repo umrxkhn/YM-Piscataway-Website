@@ -32,7 +32,8 @@ const upcomingEvents = [
     title: "Basketball Night",
     date: "Apr 20, 2026",
     time: "1:30 PM",
-    location: "Piscataway Community Center",
+    location: "Middlebush Park",
+    locationUrl: "https://www.google.com/maps/search/Middlebush+Park+NJ",
     day: "20",
     month: "Apr",
   },
@@ -122,10 +123,22 @@ const Programs = () => {
                       <Clock className="h-3.5 w-3.5" />
                       {event.time}
                     </span>
-                    <span className="flex items-center gap-1.5 justify-center">
-                      <MapPin className="h-3.5 w-3.5" />
-                      {event.location}
-                    </span>
+                    {event.locationUrl ? (
+                      <a
+                        href={event.locationUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 justify-center hover:text-primary transition-colors"
+                      >
+                        <MapPin className="h-3.5 w-3.5" />
+                        {event.location}
+                      </a>
+                    ) : (
+                      <span className="flex items-center gap-1.5 justify-center">
+                        <MapPin className="h-3.5 w-3.5" />
+                        {event.location}
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
