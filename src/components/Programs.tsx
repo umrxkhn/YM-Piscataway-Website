@@ -13,7 +13,7 @@ const programs = [
   },
   {
     title: "Community Service",
-    desc: "Give back through food drives, volunteering, and local outreach that makes a real difference.",
+    desc: "Give back through food drives, volunteering, and local outreach that makes a real difference in our community and beyond, inspiring others to serve.",
   },
 ];
 
