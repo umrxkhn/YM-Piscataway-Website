@@ -30,16 +30,6 @@ const upcomingEvents = [
     weekday: "Friday",
   },
   {
-    title: "Basketball Night",
-    date: "Apr 20, 2026",
-    time: "1:30 PM",
-    location: "Middlebush Park",
-    locationUrl: "https://www.google.com/maps/search/Middlebush+Park+NJ",
-    day: "20",
-    month: "Apr",
-    weekday: "Sunday",
-  },
-  {
     title: "YM Reunion",
     date: "Apr 25, 2026",
     time: "5:30 PM",
@@ -48,6 +38,16 @@ const upcomingEvents = [
     day: "25",
     month: "Apr",
     weekday: "Friday",
+  },
+  {
+    title: "Basketball Night",
+    date: "Apr 20, 2026",
+    time: "1:30 PM",
+    location: "Middlebush Park",
+    locationUrl: "https://www.google.com/maps/search/Middlebush+Park+NJ",
+    day: "20",
+    month: "Apr",
+    weekday: "Sunday",
   },
   {
     title: "Community Food Drive",
