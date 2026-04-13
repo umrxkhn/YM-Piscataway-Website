@@ -42,7 +42,7 @@ const StayConnected = () => {
         </p>
 
         <div className="flex items-center justify-center gap-3 mt-8 mb-10">
-          <img src={ymLogo} alt="YM Piscataway Logo" className="w-12 h-12 rounded-full object-cover" />
+          <img src={ymLogo} alt="YM Piscataway Logo" className="w-12 h-12 rounded-full object-contain bg-background" />
           <div>
             <h3 className="font-heading text-xl font-bold text-foreground">@ym.piscataway.brothers</h3>
             
