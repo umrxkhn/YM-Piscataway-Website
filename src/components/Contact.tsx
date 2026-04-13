@@ -22,7 +22,7 @@ const Contact = () => {
             </a>
             <a href="tel:+19083402190" className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors text-sm">
               <Phone className="w-4 h-4 text-primary" />
-              <span>(908) 340-2190</span>
+              <span className="font-bold">(908) 340-2190</span>
             </a>
           </div>
         </div>
