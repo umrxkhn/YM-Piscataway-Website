@@ -70,7 +70,7 @@ const upcomingEvents = [
 
 const Programs = () => {
   return (
-    <section id="programs" className="py-24 bg-background">
+    <section id="programs" className="py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-center text-gold-gradient">
           Our Programs
