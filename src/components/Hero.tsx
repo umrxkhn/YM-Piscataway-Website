@@ -18,7 +18,7 @@ const Hero = () => {
         <p className="font-heading text-3xl sm:text-5xl md:text-6xl font-normal text-gold-gradient mt-1 tracking-wide">
           PISCATAWAY
         </p>
-        <p className="font-script text-2xl sm:text-3xl md:text-4xl text-foreground/80 mt-4">
+        <p className="font-script text-2xl sm:text-3xl md:text-4xl text-foreground/80 mt-4 font-light">
           For the youth – By the youth
         </p>
         <p className="font-heading text-primary text-base sm:text-lg md:text-xl font-normal tracking-[0.3em] mt-4">
