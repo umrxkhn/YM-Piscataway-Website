@@ -37,9 +37,6 @@ const Newsletter = () => {
   return (
     <section id="newsletter" className="py-24 bg-background">
       <div className="container mx-auto px-4 text-center">
-        <div className="w-14 h-14 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-5">
-          <Mail className="w-7 h-7 text-primary" />
-        </div>
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-gold-gradient">
           Newsletter
         </h2>
