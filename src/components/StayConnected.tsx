@@ -5,12 +5,16 @@ import instagramPost1 from "@/assets/instagram-post-1.jpg";
 import instagramPost2 from "@/assets/instagram-post-2.jpg";
 import instagramPost3 from "@/assets/instagram-post-3.jpg";
 import instagramPost4 from "@/assets/instagram-post-4.jpg";
+import instagramPost5 from "@/assets/instagram-post-5.jpg";
+import instagramPost6 from "@/assets/instagram-post-6.jpg";
 
 const instagramPosts = [
   { url: "https://www.instagram.com/ym.piscataway.brothers/p/DXpuC8bkQa1/", image: instagramPost2 },
   { url: "https://www.instagram.com/ym.piscataway.brothers/p/DXZsMeSET6s/", image: instagramPost1 },
   { url: "https://www.instagram.com/ym.piscataway.brothers/p/DWpOWTaEY6X/", image: instagramPost3 },
   { url: "https://www.instagram.com/ym.piscataway.brothers/p/DUj_05ijYwo/", image: instagramPost4 },
+  { url: "https://www.instagram.com/ym.piscataway.brothers/", image: instagramPost5 },
+  { url: "https://www.instagram.com/ym.piscataway.brothers/", image: instagramPost6 },
 ];
 
 const StayConnected = () => {
