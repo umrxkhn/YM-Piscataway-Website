@@ -35,7 +35,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section id="newsletter" className="py-24 bg-black">
+    <section id="newsletter" className="py-12 bg-black">
       <div className="container mx-auto px-4 text-center">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-gold-gradient">
           Our Newsletter
