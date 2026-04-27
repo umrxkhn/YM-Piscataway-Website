@@ -1,38 +1,18 @@
-import { Instagram, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import instagramLogo from "@/assets/instagram-logo.png";
-import { useEffect } from "react";
+import instagramPost1 from "@/assets/instagram-post-1.jpg";
+import instagramPost2 from "@/assets/instagram-post-2.jpg";
+import instagramPost3 from "@/assets/instagram-post-3.jpg";
+import instagramPost4 from "@/assets/instagram-post-4.jpg";
 
 const instagramPosts = [
-  "https://www.instagram.com/ym.piscataway.brothers/p/DXZsMeSET6s/",
-  "https://www.instagram.com/ym.piscataway.brothers/p/DWzioENEXh8/",
-  "https://www.instagram.com/ym.piscataway.brothers/p/DWpOWTaEY6X/",
-  "https://www.instagram.com/ym.piscataway.brothers/p/DUj_05ijYwo/",
+  { url: "https://www.instagram.com/ym.piscataway.brothers/p/DXZsMeSET6s/", image: instagramPost1 },
+  { url: "https://www.instagram.com/ym.piscataway.brothers/p/DWzioENEXh8/", image: instagramPost2 },
+  { url: "https://www.instagram.com/ym.piscataway.brothers/p/DWpOWTaEY6X/", image: instagramPost3 },
+  { url: "https://www.instagram.com/ym.piscataway.brothers/p/DUj_05ijYwo/", image: instagramPost4 },
 ];
 
 const StayConnected = () => {
-  useEffect(() => {
-    const processEmbeds = () => {
-      if ((window as any).instgrm?.Embeds) {
-        (window as any).instgrm.Embeds.process();
-      }
-    };
-
-    // Always (re)load the script to force a fresh process pass
-    const existing = document.querySelector<HTMLScriptElement>('script[data-ig-embed]');
-    if (existing) existing.remove();
-
-    const script = document.createElement("script");
-    script.src = "https://www.instagram.com/embed.js";
-    script.async = true;
-    script.setAttribute("data-ig-embed", "true");
-    script.onload = processEmbeds;
-    document.body.appendChild(script);
-
-    // Retry a few times in case blockquotes mount after script load
-    const timers = [300, 800, 1500, 3000].map((ms) => setTimeout(processEmbeds, ms));
-    return () => timers.forEach(clearTimeout);
-  }, []);
-
   return (
     <section id="connect" className="py-24 bg-black">
       <div className="container mx-auto px-4">
@@ -51,31 +31,32 @@ const StayConnected = () => {
           <a href="https://www.instagram.com/ym.piscataway.brothers/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary transition-colors">Click to view full feed</a>
         </div>
 
-        {/* Instagram Embeds Grid */}
+        {/* Instagram Photos Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {instagramPosts.map((url) => (
-            <div key={url} className="flex justify-center min-h-[360px]">
-              <blockquote
-                className="instagram-media w-full min-w-[280px] max-w-[400px] rounded-lg border border-border bg-card p-6 text-center text-foreground"
-                data-instgrm-captioned
-                data-instgrm-permalink={url}
-                data-instgrm-version="14"
-              >
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex min-h-[300px] flex-col items-center justify-center gap-4 rounded-lg border border-primary/35 bg-background/60 p-6 transition-colors hover:border-primary"
-                >
-                  <Instagram className="h-10 w-10 text-primary" aria-hidden="true" />
-                  <span className="font-heading text-lg font-bold text-foreground">View this post on Instagram</span>
-                  <span className="text-sm text-muted-foreground">A post shared by YM Piscataway</span>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                    Open post <ExternalLink className="h-4 w-4" aria-hidden="true" />
-                  </span>
-                </a>
-              </blockquote>
-            </div>
+          {instagramPosts.map((post, index) => (
+            <a
+              key={post.url}
+              href={post.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block overflow-hidden rounded-lg border border-border bg-card transition-transform hover:-translate-y-1"
+            >
+              <img
+                src={post.image}
+                alt={`YM Piscataway Instagram post ${index + 1}`}
+                className="aspect-square w-full object-cover"
+                loading="lazy"
+                width={640}
+                height={640}
+              />
+              <div className="flex items-center justify-between gap-3 p-4 text-sm font-semibold text-primary">
+                <span>View post</span>
+                <ExternalLink
+                  className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                />
+              </div>
+            </a>
           ))}
         </div>
       </div>
