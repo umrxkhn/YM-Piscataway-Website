@@ -14,14 +14,16 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
-        <a href="#home" className="font-heading text-xl font-bold text-primary tracking-wider transition-all duration-200 hover:scale-105 hover:drop-shadow-[0_0_12px_hsl(43_80%_50%/0.6)] absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
+      <div className="container mx-auto grid grid-cols-3 items-center h-16 px-4">
+        <div className="flex items-center justify-start">
+          <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+        <a href="#home" className="font-heading text-xl font-bold text-primary tracking-wider transition-all duration-200 hover:scale-105 hover:drop-shadow-[0_0_12px_hsl(43_80%_50%/0.6)] justify-self-center whitespace-nowrap">
           YM Piscataway
         </a>
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4 justify-self-end">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -31,10 +33,16 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          <a
+            href="#contact"
+            className="bg-gold-gradient text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold"
+          >
+            Join Us
+          </a>
         </div>
         <a
           href="#contact"
-          className="bg-gold-gradient text-primary-foreground px-3 py-1.5 rounded-md text-xs font-semibold md:px-5 md:py-2 md:text-sm"
+          className="md:hidden bg-gold-gradient text-primary-foreground px-3 py-1.5 rounded-md text-xs font-semibold justify-self-end"
         >
           Join Us
         </a>
