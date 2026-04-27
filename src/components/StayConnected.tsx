@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react";
 import instagramLogo from "@/assets/instagram-logo.png";
 import instagramPost1 from "@/assets/instagram-post-1.jpg";
 import instagramPost2 from "@/assets/instagram-post-2.jpg";
