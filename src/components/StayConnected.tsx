@@ -1,6 +1,6 @@
 import { Instagram, ExternalLink } from "lucide-react";
 import instagramLogo from "@/assets/instagram-logo.png";
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 
 const instagramPosts = [
   "https://www.instagram.com/ym.piscataway.brothers/p/DXZsMeSET6s/",
@@ -15,31 +15,7 @@ const instagramPosts = [
 ];
 
 const StayConnected = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const scriptLoaded = useRef(false);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "200px" }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
     const processEmbeds = () => {
       if ((window as any).instgrm?.Embeds) {
         (window as any).instgrm.Embeds.process();
@@ -51,26 +27,22 @@ const StayConnected = () => {
       return;
     }
 
-    const existing = document.querySelector<HTMLScriptElement>('script[src="https://www.instagram.com/embed.js"]');
+    const existing = document.querySelector<HTMLScriptElement>('script[src="https://www.instagram.com/embed.js"], script[src="//www.instagram.com/embed.js"]');
     if (existing) {
       existing.addEventListener("load", processEmbeds);
-      // In case it already loaded
       setTimeout(processEmbeds, 500);
       return;
     }
-
-    if (scriptLoaded.current) return;
-    scriptLoaded.current = true;
 
     const script = document.createElement("script");
     script.src = "https://www.instagram.com/embed.js";
     script.async = true;
     script.onload = processEmbeds;
     document.body.appendChild(script);
-  }, [isVisible]);
+  }, []);
 
   return (
-    <section id="connect" className="py-24 bg-black" ref={sectionRef}>
+    <section id="connect" className="py-24 bg-black">
       <div className="container mx-auto px-4">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-center text-gold-gradient">
           Stay Connected
@@ -89,25 +61,30 @@ const StayConnected = () => {
 
         {/* Instagram Embeds Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {isVisible &&
-            instagramPosts.map((url) => (
-              <div key={url} className="flex justify-center">
-                <blockquote
-                  className="instagram-media"
-                  data-instgrm-captioned
-                  data-instgrm-permalink={url}
-                  data-instgrm-version="14"
-                  style={{
-                    background: "hsl(0 0% 7%)",
-                    border: "1px solid hsl(0 0% 18%)",
-                    borderRadius: "8px",
-                    maxWidth: "400px",
-                    width: "100%",
-                    minWidth: "280px",
-                  }}
-                />
-              </div>
-            ))}
+          {instagramPosts.map((url) => (
+            <div key={url} className="flex justify-center min-h-[360px]">
+              <blockquote
+                className="instagram-media w-full min-w-[280px] max-w-[400px] rounded-lg border border-border bg-card p-6 text-center text-foreground"
+                data-instgrm-captioned
+                data-instgrm-permalink={url}
+                data-instgrm-version="14"
+              >
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex min-h-[300px] flex-col items-center justify-center gap-4 rounded-lg border border-primary/35 bg-background/60 p-6 transition-colors hover:border-primary"
+                >
+                  <Instagram className="h-10 w-10 text-primary" aria-hidden="true" />
+                  <span className="font-heading text-lg font-bold text-foreground">View this post on Instagram</span>
+                  <span className="text-sm text-muted-foreground">A post shared by YM Piscataway</span>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                    Open post <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                </a>
+              </blockquote>
+            </div>
+          ))}
         </div>
       </div>
     </section>
