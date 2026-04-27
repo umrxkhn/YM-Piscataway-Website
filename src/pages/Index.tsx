@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Programs from "@/components/Programs";
 import StayConnected from "@/components/StayConnected";
 import Newsletter from "@/components/Newsletter";
 import Donate from "@/components/Donate";
@@ -13,6 +14,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <About />
+      <Programs />
       <StayConnected />
       <Donate />
       <Newsletter />
