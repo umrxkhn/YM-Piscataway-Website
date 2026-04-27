@@ -14,7 +14,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black backdrop-blur-md border-b border-border">
       {/* Mobile layout */}
       <div className="md:hidden grid grid-cols-3 items-center h-16 px-4 bg-black">
         <div className="flex items-center justify-start">
