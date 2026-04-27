@@ -9,7 +9,7 @@ const pillars = [
   {
     icon: Heart,
     title: "Mentorship",
-    desc: "Leadership workshops, career guidance, and one-on-one mentoring",
+    desc: "Leadership workshops, career guidance, and one-on-one mentoring to inspire the youth",
   },
   {
     icon: BookOpen,
@@ -19,7 +19,7 @@ const pillars = [
   {
     icon: HandHelping,
     title: "Service",
-    desc: "Feeding the hungry, relief work, and local volunteering efforts",
+    desc: "Feeding the hungry, relief work, and local volunteering efforts for the community",
   },
 ];
 
