@@ -49,13 +49,6 @@ const StayConnected = () => {
                 width={640}
                 height={640}
               />
-              <div className="flex items-center justify-between gap-3 p-4 text-sm font-semibold text-primary">
-                <span>View post</span>
-                <ExternalLink
-                  className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
-                  aria-hidden="true"
-                />
-              </div>
             </a>
           ))}
         </div>
