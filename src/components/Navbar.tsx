@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       {/* Mobile layout */}
-      <div className="md:hidden grid grid-cols-3 items-center h-16 px-4">
+      <div className="md:hidden grid grid-cols-3 items-center h-16 px-4 bg-black">
         <div className="flex items-center justify-start">
           <button className="text-foreground" onClick={() => setOpen(!open)} aria-label="Toggle menu">
             {open ? <X size={24} /> : <Menu size={24} />}
@@ -35,8 +35,7 @@ const Navbar = () => {
 
       {/* Desktop / tablet layout */}
       <div className="hidden md:flex items-center h-16 px-6 container mx-auto">
-        <a href="#home" className="flex items-center gap-3 mr-auto transition-all duration-200 hover:scale-105">
-          <img src={ymLogo} alt="YM Piscataway" className="h-10 w-10 object-contain" />
+        <a href="#home" className="flex items-center mr-auto transition-all duration-200 hover:scale-105">
           <span className="font-heading text-xl font-bold text-primary tracking-wider whitespace-nowrap">
             YM Piscataway
           </span>
