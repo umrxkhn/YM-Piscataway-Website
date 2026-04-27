@@ -1,19 +1,19 @@
 const programs = [
   {
     title: "Weekly Halaqas",
-    desc: "Gather weekly on Fridays for inclusive sports, engaging prayer, interactive islamic discussions, and amazing food while increasing our spiritual growth in a welcoming environment",
+    desc: "Gather every Friday for inclusive sports, prayer, engaging Islamic discussions, and great food in a welcoming environment",
   },
   {
     title: "Sports",
-    desc: "Basketball, soccer, spikeball, and more whilst staying active while building brotherhood, strengthening teamwork, and having fun with others together every week",
+    desc: "Basketball, soccer, spikeball, and more — stay active while building brotherhood, teamwork, and lifelong friendships every week",
   },
   {
     title: "Retreats & Trips",
-    desc: "Our annual ICNA YMC Confrence & Weekend Camp Retreat featuring additional activities that strengthen bonds, build lasting friendships, and create unforgettable memories together",
+    desc: "Our annual ICNA YMC Conference and Weekend Camp Retreat strengthen bonds and create unforgettable memories together",
   },
   {
     title: "Community Service",
-    desc: "Give back through our weekly food drives, volunteering in various mosques, and local outreach that makes a real difference in our community and beyond, inspiring others to serve",
+    desc: "Give back through weekly food drives, mosque volunteering, and local outreach that make a real difference in our community",
   },
 ];
 
