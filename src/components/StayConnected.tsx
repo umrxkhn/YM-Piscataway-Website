@@ -44,7 +44,7 @@ const StayConnected = () => {
               <img
                 src={post.image}
                 alt={`YM Piscataway Instagram post ${index + 1}`}
-                className="aspect-square w-full object-cover"
+                className="aspect-square w-full object-contain bg-background"
                 loading="lazy"
                 width={640}
                 height={640}
