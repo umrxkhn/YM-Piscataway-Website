@@ -33,7 +33,8 @@ const Newsletter = () => {
       }
       return;
     }
-    toast({ title: "Subscribed!", description: "You'll hear from us soon." });
+    supabase.functions.invoke("send-newsletter-welcome", { body: { email: trimmed } });
+    toast({ title: "Subscribed!", description: "Check your inbox for a welcome email." });
     setEmail("");
   };
 
