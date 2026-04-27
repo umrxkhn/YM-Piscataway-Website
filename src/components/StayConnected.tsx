@@ -5,12 +5,7 @@ import { useEffect } from "react";
 const instagramPosts = [
   "https://www.instagram.com/ym.piscataway.brothers/p/DXZsMeSET6s/",
   "https://www.instagram.com/ym.piscataway.brothers/p/DWzioENEXh8/",
-  "https://www.instagram.com/ym.piscataway.brothers/p/DXFh_QCEc0s/",
-  "https://www.instagram.com/ym.newjersey.brothers/p/DW4FmIEjffs/",
   "https://www.instagram.com/ym.piscataway.brothers/p/DWpOWTaEY6X/",
-  "https://www.instagram.com/ym.piscataway.brothers/p/DV9hxTzkfXT/",
-  "https://www.instagram.com/ym.piscataway.brothers/p/DVHdGFBEX3y/",
-  "https://www.instagram.com/ym.piscataway.brothers/p/DU1vunskZIO/",
   "https://www.instagram.com/ym.piscataway.brothers/p/DUj_05ijYwo/",
 ];
 
