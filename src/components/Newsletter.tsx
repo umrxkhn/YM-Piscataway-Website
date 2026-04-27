@@ -14,7 +14,10 @@ const Newsletter = () => {
     e.preventDefault();
     const trimmed = email.trim();
     if (!trimmed || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
-      toast({ title: "Please enter a valid email", variant: "destructive" });
+      toast({
+        title: "Please enter a valid email",
+        className: "bg-black text-muted-foreground border border-primary",
+      });
       return;
     }
     setIsSubmitting(true);
