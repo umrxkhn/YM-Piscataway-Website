@@ -23,7 +23,7 @@ const Donate = () => {
           Donate
         </h2>
         <p className="text-muted-foreground text-lg mb-6">
-          Your generous contributions help us continue serving the community
+          Your generous contributions help us continue serving the community with the necessary funds to keep our organization running smoothly
         </p>
 
         <a

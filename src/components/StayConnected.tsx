@@ -21,7 +21,7 @@ const StayConnected = () => {
           Stay Connected
         </h2>
         <p className="text-muted-foreground text-center max-w-2xl mx-auto mt-4 text-lg">
-          Check out our latest posts, events, and highlights on Instagram
+          Check out our latest posts, events, and highlights on Instagram to keep up on our any of our upcoming events
         </p>
 
         <div className="flex flex-col items-center mt-8 mb-10 gap-2">
