@@ -1,4 +1,4 @@
-import { Heart, MessageCircle, Send, Bookmark } from "lucide-react";
+import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal } from "lucide-react";
 import instagramLogo from "@/assets/instagram-logo.png";
 import ymLogo from "@/assets/ym-logo.png";
 import instagramPost1 from "@/assets/instagram-post-1.jpg";
@@ -32,7 +32,7 @@ const StayConnected = () => {
         </div>
 
         {/* Instagram-style post cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {instagramPosts.map((post, index) => (
             <a
               key={post.url}
@@ -42,7 +42,7 @@ const StayConnected = () => {
               className="group block overflow-hidden rounded-lg border border-primary/50 bg-card transition-all duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-[0_0_20px_2px_hsl(43_80%_50%/0.4)]"
             >
               {/* Header */}
-              <div className="flex items-center justify-center px-3 py-2.5">
+              <div className="flex items-center justify-between px-3 py-2.5">
                 <div className="flex items-center gap-2.5 min-w-0">
                   <span className="inline-block rounded-full p-[2px] bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600">
                     <span className="block rounded-full bg-card p-[2px]">
@@ -58,6 +58,7 @@ const StayConnected = () => {
                     ym.piscataway.brothers
                   </span>
                 </div>
+                <MoreHorizontal className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
               </div>
 
               {/* Image */}
@@ -71,15 +72,15 @@ const StayConnected = () => {
               />
 
               {/* Action row */}
-              <div className="flex items-center justify-center px-3 pt-3 pb-2">
+              <div className="flex items-center justify-between px-3 pt-3 pb-2">
                 <div className="flex items-center gap-3 text-foreground">
                   <Heart className="h-5 w-5" aria-hidden="true" />
                   <MessageCircle className="h-5 w-5" aria-hidden="true" />
                   <Send className="h-5 w-5" aria-hidden="true" />
-                  <Bookmark className="h-5 w-5 text-foreground" aria-hidden="true" />
                 </div>
+                <Bookmark className="h-5 w-5 text-foreground" aria-hidden="true" />
               </div>
-              <div className="px-3 pb-3 text-xs font-semibold text-foreground text-center">
+              <div className="px-3 pb-3 text-xs font-semibold text-foreground">
                 View on Instagram
               </div>
             </a>
