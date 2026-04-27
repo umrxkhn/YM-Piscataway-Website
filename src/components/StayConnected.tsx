@@ -1,5 +1,6 @@
-import { ExternalLink } from "lucide-react";
+import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal } from "lucide-react";
 import instagramLogo from "@/assets/instagram-logo.png";
+import ymLogo from "@/assets/ym-logo.png";
 import instagramPost1 from "@/assets/instagram-post-1.jpg";
 import instagramPost2 from "@/assets/instagram-post-2.jpg";
 import instagramPost3 from "@/assets/instagram-post-3.jpg";
@@ -28,10 +29,9 @@ const StayConnected = () => {
             <img src={instagramLogo} alt="Instagram" className="w-10 h-10 object-contain" loading="lazy" width={512} height={512} />
             <h3 className="font-heading text-lg font-bold text-foreground">@ym.piscataway.brothers</h3>
           </a>
-          
         </div>
 
-        {/* Instagram Photos Grid */}
+        {/* Instagram-style post cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {instagramPosts.map((post, index) => (
             <a
@@ -41,6 +41,27 @@ const StayConnected = () => {
               rel="noopener noreferrer"
               className="group block overflow-hidden rounded-lg border border-border bg-card transition-transform hover:-translate-y-1"
             >
+              {/* Header */}
+              <div className="flex items-center justify-between px-3 py-2.5">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <span className="inline-block rounded-full p-[2px] bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600">
+                    <span className="block rounded-full bg-card p-[2px]">
+                      <img
+                        src={ymLogo}
+                        alt="YM Piscataway"
+                        className="h-7 w-7 rounded-full object-cover"
+                        loading="lazy"
+                      />
+                    </span>
+                  </span>
+                  <span className="truncate text-sm font-semibold text-foreground">
+                    ym.piscataway.brothers
+                  </span>
+                </div>
+                <MoreHorizontal className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
+              </div>
+
+              {/* Image */}
               <img
                 src={post.image}
                 alt={`YM Piscataway Instagram post ${index + 1}`}
@@ -49,12 +70,18 @@ const StayConnected = () => {
                 width={640}
                 height={640}
               />
-              <div className="flex items-center justify-center gap-2 p-4 text-sm font-semibold text-primary">
-                <span>View post</span>
-                <ExternalLink
-                  className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
-                  aria-hidden="true"
-                />
+
+              {/* Action row */}
+              <div className="flex items-center justify-between px-3 pt-3 pb-2">
+                <div className="flex items-center gap-3 text-foreground">
+                  <Heart className="h-5 w-5" aria-hidden="true" />
+                  <MessageCircle className="h-5 w-5" aria-hidden="true" />
+                  <Send className="h-5 w-5" aria-hidden="true" />
+                </div>
+                <Bookmark className="h-5 w-5 text-foreground" aria-hidden="true" />
+              </div>
+              <div className="px-3 pb-3 text-xs font-semibold text-foreground">
+                View on Instagram
               </div>
             </a>
           ))}
