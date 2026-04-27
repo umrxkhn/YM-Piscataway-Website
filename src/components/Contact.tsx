@@ -15,12 +15,12 @@ const Contact = () => {
             <p className="text-foreground font-bold text-xl">Maaz Motiwala</p>
             <p className="text-primary text-sm">YM Piscataway Coordinator</p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a href="mailto:maaz.motiwala@youngmuslims.com" className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors text-sm">
+          <div className="flex flex-col sm:flex-row gap-4 items-center">
+            <a href="mailto:maaz.motiwala@youngmuslims.com" className="flex items-center justify-center gap-2 text-foreground/80 hover:text-primary transition-colors text-sm text-center">
               <Mail className="w-4 h-4 text-primary" />
               <span className="font-bold">maaz.motiwala@youngmuslims.com</span>
             </a>
-            <a href="tel:+19083402190" className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors text-sm">
+            <a href="tel:+19083402190" className="flex items-center justify-center gap-2 text-foreground/80 hover:text-primary transition-colors text-sm text-center">
               <Phone className="w-4 h-4 text-primary" />
               <span className="font-bold">(908) 340-2190</span>
             </a>
