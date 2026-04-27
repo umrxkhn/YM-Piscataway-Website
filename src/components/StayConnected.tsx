@@ -17,23 +17,20 @@ const StayConnected = () => {
       }
     };
 
-    if ((window as any).instgrm?.Embeds) {
-      processEmbeds();
-      return;
-    }
-
-    const existing = document.querySelector<HTMLScriptElement>('script[src="https://www.instagram.com/embed.js"], script[src="//www.instagram.com/embed.js"]');
-    if (existing) {
-      existing.addEventListener("load", processEmbeds);
-      setTimeout(processEmbeds, 500);
-      return;
-    }
+    // Always (re)load the script to force a fresh process pass
+    const existing = document.querySelector<HTMLScriptElement>('script[data-ig-embed]');
+    if (existing) existing.remove();
 
     const script = document.createElement("script");
     script.src = "https://www.instagram.com/embed.js";
     script.async = true;
+    script.setAttribute("data-ig-embed", "true");
     script.onload = processEmbeds;
     document.body.appendChild(script);
+
+    // Retry a few times in case blockquotes mount after script load
+    const timers = [300, 800, 1500, 3000].map((ms) => setTimeout(processEmbeds, ms));
+    return () => timers.forEach(clearTimeout);
   }, []);
 
   return (
