@@ -1,5 +1,3 @@
-import { Calendar, MapPin, Clock } from "lucide-react";
-
 const programs = [
   {
     title: "Weekly Halaqas",
@@ -16,55 +14,6 @@ const programs = [
   {
     title: "Community Service",
     desc: "Give back through our weekly food drives, volunteering in various mosques, and local outreach that makes a real difference in our community and beyond, inspiring others to serve",
-  },
-];
-const upcomingEvents = [
-  {
-    title: "Friday Halaqa",
-    date: "Apr 18, 2026",
-    time: "5:30 PM",
-    location: "TBD",
-    day: "18",
-    month: "Apr",
-    weekday: "Friday",
-  },
-  {
-    title: "YM Reunion",
-    date: "Apr 25, 2026",
-    time: "5:30 PM",
-    location: "Middlebush Park",
-    locationUrl: "https://maps.app.goo.gl/M2oxCbiLDP3B8mRR8",
-    linkUrl: "https://www.instagram.com/ym.piscataway.brothers/p/DXFh_QCEc0s/",
-    day: "25",
-    month: "Apr",
-    weekday: "Friday",
-  },
-  {
-    title: "Basketball Night",
-    date: "Apr 20, 2026",
-    time: "1:30 PM",
-    location: "TBD",
-    day: "20",
-    month: "Apr",
-    weekday: "Sunday",
-  },
-  {
-    title: "Community Food Drive",
-    date: "May 8, 2026",
-    time: "5:30 PM",
-    location: "TBD",
-    day: "8",
-    month: "May",
-    weekday: "Friday",
-  },
-  {
-    title: "ICNA YMC Convention",
-    date: "May 23, 2026",
-    time: "All Day",
-    location: "Baltimore, MD",
-    day: "23",
-    month: "May",
-    weekday: "Saturday",
   },
 ];
 
@@ -88,93 +37,6 @@ const Programs = () => {
               <p className="text-muted-foreground mt-2 text-sm leading-relaxed">{p.desc}</p>
             </div>
           ))}
-        </div>
-
-        {/* Upcoming Events */}
-        <div className="mt-24">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Calendar className="h-6 w-6 text-primary" />
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-gold-gradient">
-              Upcoming Events
-            </h2>
-          </div>
-          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-lg">
-            Mark your calendars and join us at our next events
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {upcomingEvents.slice(0, 4).map((event, i) => {
-              const cardContent = (
-                <>
-                  {/* Date badge */}
-                  <div className="flex flex-col items-center justify-center bg-primary/10 px-5 py-5">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-primary">
-                      {event.weekday}
-                    </span>
-                    <span className="text-3xl font-bold text-foreground leading-tight">
-                      {event.month} {event.day}
-                    </span>
-                  </div>
-
-                  {/* Event details */}
-                  <div className="flex flex-col items-center px-4 py-4 flex-1">
-                    <h3 className="font-heading text-base font-bold text-foreground">
-                      {event.title}
-                    </h3>
-                    <div className="flex flex-col gap-1.5 mt-2 text-sm text-muted-foreground">
-                      <span className="flex items-center gap-1.5 justify-center">
-                        <Clock className="h-3.5 w-3.5" />
-                        {event.time}
-                      </span>
-                      {"locationUrl" in event && event.locationUrl ? (
-                        <span
-                          className="flex items-center gap-1.5 justify-center hover:text-foreground transition-colors cursor-pointer"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            window.open(event.locationUrl as string, "_blank", "noopener,noreferrer");
-                          }}
-                        >
-                          <MapPin className="h-3.5 w-3.5" />
-                          {event.location}
-                        </span>
-                      ) : (
-                        <span className={`flex items-center gap-1.5 justify-center ${event.location === "TBD" ? "text-primary" : ""}`}>
-                          <MapPin className="h-3.5 w-3.5" />
-                          {event.location}
-                        </span>
-                      )}
-                    </div>
-                    {"linkUrl" in event && event.linkUrl && (
-                      <span className="mt-3 text-xs font-semibold text-primary hover:underline">
-                        Click to learn more →
-                      </span>
-                    )}
-                  </div>
-                </>
-              );
-
-              return "linkUrl" in event && event.linkUrl ? (
-                <a
-                  key={i}
-                  href={event.linkUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col bg-card border border-border rounded-lg overflow-hidden interactive-card text-center no-underline text-inherit"
-                  style={{ color: "inherit", textDecoration: "none" }}
-                >
-                  {cardContent}
-                </a>
-              ) : (
-                <div
-                  key={i}
-                  className="flex flex-col bg-card border border-border rounded-lg overflow-hidden interactive-card text-center"
-                >
-                  {cardContent}
-                </div>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>
