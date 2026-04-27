@@ -107,3 +107,9 @@ section {
   scroll-margin-top: 4rem;
 }
 
+
+/* Override Instagram embed default white border */
+.instagram-media {
+  border: none !important;
+  box-shadow: none !important;
+}
