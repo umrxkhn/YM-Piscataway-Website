@@ -39,7 +39,7 @@ const StayConnected = () => {
               href={post.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block overflow-hidden rounded-lg border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-[0_0_20px_2px_hsl(43_80%_50%/0.4)]"
+              className="group block overflow-hidden rounded-lg border border-primary/50 bg-card transition-all duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-[0_0_20px_2px_hsl(43_80%_50%/0.4)]"
             >
               {/* Header */}
               <div className="flex items-center justify-between px-3 py-2.5">
