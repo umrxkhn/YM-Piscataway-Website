@@ -19,12 +19,16 @@ const Navbar = () => {
       {/* Mobile layout */}
       <div className="md:hidden grid grid-cols-3 items-center h-16 px-4 bg-black">
         <div className="flex items-center justify-start">
-          <button className="text-foreground" onClick={() => setOpen(!open)} aria-label="Toggle menu">
+          <button
+            className="text-foreground transition-all duration-200 hover:scale-110 hover:text-primary hover:drop-shadow-[0_0_8px_hsl(43_80%_50%/0.7)]"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-        <a href="#home" className="justify-self-center flex items-center">
-          <img src={ymLogo} alt="YM Piscataway" className="h-10 w-10 object-contain" />
+        <a href="#home" className="justify-self-center flex items-center transition-all duration-200 hover:scale-110">
+          <img src={ymLogo} alt="YM Piscataway" className="h-10 w-10 object-contain hover:drop-shadow-[0_0_10px_hsl(43_80%_50%/0.8)] transition-all duration-200" />
         </a>
         <a
           href="#contact"
