@@ -54,7 +54,7 @@ const Navbar = () => {
         </div>
         <a
           href="#contact"
-          className="bg-gold-gradient text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold ml-auto"
+          className="bg-gold-gradient text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold ml-auto transition-all duration-200 hover:scale-105 hover:shadow-[0_0_20px_2px_hsl(43_80%_50%/0.4)]"
         >
           Join Us
         </a>
