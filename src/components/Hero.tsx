@@ -6,7 +6,7 @@ const Hero = () => {
       <img
         src={heroCollage}
         alt="Young Muslims Piscataway community activities"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain object-center sm:object-cover"
         width={1920}
         height={1080}
       />
