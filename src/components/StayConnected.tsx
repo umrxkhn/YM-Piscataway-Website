@@ -32,7 +32,7 @@ const StayConnected = () => {
         </div>
 
         {/* Instagram-style post cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {instagramPosts.map((post, index) => (
             <a
               key={post.url}
