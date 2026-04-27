@@ -42,7 +42,7 @@ const Donate = () => {
           {paymentMethods.map((method) => (
             <div
               key={method.name}
-              className="bg-card border border-border rounded-xl p-6 flex flex-col items-center text-center gap-2 transition-transform duration-200 hover:border-primary/40 hover:-translate-y-2 hover:scale-105"
+              className="bg-card border border-primary/50 rounded-xl p-6 flex flex-col items-center text-center gap-2 transition-transform duration-200 hover:border-primary hover:-translate-y-2 hover:scale-105"
             >
               <h3 className="font-heading text-xl font-bold text-primary">
                 {method.name}
