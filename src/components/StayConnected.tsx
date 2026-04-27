@@ -1,4 +1,4 @@
-import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal } from "lucide-react";
+import { Heart, MessageCircle, Send, Bookmark } from "lucide-react";
 import instagramLogo from "@/assets/instagram-logo.png";
 import ymLogo from "@/assets/ym-logo.png";
 import instagramPost1 from "@/assets/instagram-post-1.jpg";
