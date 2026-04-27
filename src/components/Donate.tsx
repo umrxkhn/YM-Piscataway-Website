@@ -22,10 +22,8 @@ const Donate = () => {
         <h2 className="font-heading text-4xl md:text-5xl font-bold text-gold-gradient mb-3">
           Donate
         </h2>
-        <p className="text-muted-foreground text-lg mb-6 max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-lg mb-6">
           Your generous contributions help us continue serving the community
-          <br />
-          with the necessary funds to keep our organization running smoothly
         </p>
 
         <a
