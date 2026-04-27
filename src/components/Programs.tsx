@@ -19,7 +19,7 @@ const programs = [
 
 const Programs = () => {
   return (
-    <section id="programs" className="py-24 bg-muted/30">
+    <section id="programs" className="py-12 bg-muted/30">
       <div className="container mx-auto px-4">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-center text-gold-gradient">
           Our Programs

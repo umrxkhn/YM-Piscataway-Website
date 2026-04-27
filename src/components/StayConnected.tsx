@@ -15,7 +15,7 @@ const instagramPosts = [
 
 const StayConnected = () => {
   return (
-    <section id="connect" className="py-24 bg-black">
+    <section id="connect" className="py-12 bg-black">
       <div className="container mx-auto px-4">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-center text-gold-gradient">
           Stay Connected
