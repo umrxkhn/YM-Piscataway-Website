@@ -59,24 +59,6 @@ const StayConnected = () => {
             </a>
           ))}
         </div>
-              >
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex min-h-[300px] flex-col items-center justify-center gap-4 rounded-lg border border-primary/35 bg-background/60 p-6 transition-colors hover:border-primary"
-                >
-                  <Instagram className="h-10 w-10 text-primary" aria-hidden="true" />
-                  <span className="font-heading text-lg font-bold text-foreground">View this post on Instagram</span>
-                  <span className="text-sm text-muted-foreground">A post shared by YM Piscataway</span>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                    Open post <ExternalLink className="h-4 w-4" aria-hidden="true" />
-                  </span>
-                </a>
-              </blockquote>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
