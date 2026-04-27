@@ -18,8 +18,8 @@ const paymentMethods = [
 const Donate = () => {
   return (
     <section id="donate" className="py-20 px-4 bg-muted/30">
-      <div className="container mx-auto max-w-2xl text-center">
-        <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+      <div className="container mx-auto max-w-5xl text-center">
+        <h2 className="font-heading text-4xl md:text-5xl font-bold text-gold-gradient mb-6">
           Donate
         </h2>
         <p className="text-muted-foreground text-lg mb-12">
@@ -35,10 +35,10 @@ const Donate = () => {
           Donate Online <ExternalLink className="w-5 h-5" />
         </a>
 
-        <div className="space-y-6">
-          <h3 className="font-heading text-2xl font-semibold text-foreground mb-6">
-            Other Ways To Give Back 
-          </h3>
+        <h3 className="font-heading text-2xl font-semibold text-foreground mb-6">
+          Other Ways To Give Back
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {paymentMethods.map((method) => (
             <div
               key={method.name}
