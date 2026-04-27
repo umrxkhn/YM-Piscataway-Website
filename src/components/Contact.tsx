@@ -20,7 +20,7 @@ const Contact = () => {
               <Mail className="w-4 h-4 text-primary" />
               <span className="font-bold">maaz.motiwala@youngmuslims.com</span>
             </a>
-            <a href="tel:+19083402190" className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors text-sm">
+            <a href="tel:+19083402190" className="flex items-center justify-center gap-2 text-foreground/80 hover:text-primary transition-colors text-sm text-center">
               <Phone className="w-4 h-4 text-primary" />
               <span className="font-bold">(908) 340-2190</span>
             </a>
