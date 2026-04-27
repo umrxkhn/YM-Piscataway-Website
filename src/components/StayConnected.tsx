@@ -67,7 +67,7 @@ const StayConnected = () => {
   }, [isVisible]);
 
   return (
-    <section id="connect" className="py-24 bg-black border-b-2 border-primary/60" ref={sectionRef}>
+    <section id="connect" className="py-24 bg-muted/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-center text-gold-gradient">
           Stay Connected
