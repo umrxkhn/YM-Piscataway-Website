@@ -35,17 +35,34 @@ const StayConnected = () => {
   }, []);
 
   useEffect(() => {
-    if (!isVisible || scriptLoaded.current) return;
+    if (!isVisible) return;
+
+    const processEmbeds = () => {
+      if ((window as any).instgrm?.Embeds) {
+        (window as any).instgrm.Embeds.process();
+      }
+    };
+
+    if ((window as any).instgrm?.Embeds) {
+      processEmbeds();
+      return;
+    }
+
+    const existing = document.querySelector<HTMLScriptElement>('script[src="https://www.instagram.com/embed.js"]');
+    if (existing) {
+      existing.addEventListener("load", processEmbeds);
+      // In case it already loaded
+      setTimeout(processEmbeds, 500);
+      return;
+    }
+
+    if (scriptLoaded.current) return;
     scriptLoaded.current = true;
 
     const script = document.createElement("script");
     script.src = "https://www.instagram.com/embed.js";
     script.async = true;
-    script.onload = () => {
-      if ((window as any).instgrm) {
-        (window as any).instgrm.Embeds.process();
-      }
-    };
+    script.onload = processEmbeds;
     document.body.appendChild(script);
   }, [isVisible]);
 
