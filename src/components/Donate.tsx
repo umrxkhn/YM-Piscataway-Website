@@ -17,12 +17,12 @@ const paymentMethods = [
 
 const Donate = () => {
   return (
-    <section id="donate" className="py-20 px-4 bg-muted/30">
+    <section id="donate" className="py-12 px-4 bg-muted/30">
       <div className="container mx-auto max-w-5xl text-center">
-        <h2 className="font-heading text-4xl md:text-5xl font-bold text-gold-gradient mb-4">
+        <h2 className="font-heading text-4xl md:text-5xl font-bold text-gold-gradient mb-3">
           Donate
         </h2>
-        <p className="text-muted-foreground text-lg mb-12">
+        <p className="text-muted-foreground text-lg mb-6">
           Your generous contributions help us continue serving the community
         </p>
 
@@ -30,12 +30,12 @@ const Donate = () => {
           href="https://giving.ymsite.com/page/YM2026?fundraiser=NLQCEJCV&member=SNKQPTXV"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-transparent border border-primary text-primary px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-[0_0_20px_2px_hsl(43_80%_50%/0.4)] mb-16"
+          className="inline-flex items-center gap-2 bg-transparent border border-primary text-primary px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-[0_0_20px_2px_hsl(43_80%_50%/0.4)] mb-10"
         >
           Donate Online <ExternalLink className="w-5 h-5" />
         </a>
 
-        <h3 className="font-heading text-2xl font-semibold text-foreground mb-8">
+        <h3 className="font-heading text-2xl font-semibold text-foreground mb-5">
           Other Ways To Give Back
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
