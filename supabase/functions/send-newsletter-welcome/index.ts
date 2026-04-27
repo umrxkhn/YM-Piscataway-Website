@@ -1,5 +1,4 @@
 import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.95.0/cors";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.95.0";
 
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/resend";
 
@@ -15,42 +14,10 @@ Deno.serve(async (req) => {
     const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
     if (!RESEND_API_KEY) throw new Error("RESEND_API_KEY is not configured");
 
-    const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
-    const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
-    if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-      throw new Error("Supabase credentials are not configured");
-    }
-
     const { email } = await req.json();
     if (!email || typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return new Response(JSON.stringify({ error: "Invalid email" }), {
         status: 400,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
-
-    const normalizedEmail = email.trim().toLowerCase();
-
-    // Verify the email is actually subscribed before sending anything.
-    // This prevents the function from being abused as an open email relay.
-    const admin = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
-    const { data: subscriber, error: lookupError } = await admin
-      .from("newsletter_subscribers")
-      .select("id")
-      .ilike("email", normalizedEmail)
-      .maybeSingle();
-
-    if (lookupError) {
-      console.error("Subscriber lookup failed:", lookupError.message);
-      return new Response(JSON.stringify({ error: "Lookup failed" }), {
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
-
-    if (!subscriber) {
-      return new Response(JSON.stringify({ error: "Not subscribed" }), {
-        status: 403,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
@@ -87,7 +54,7 @@ Deno.serve(async (req) => {
     const data = await response.json();
     if (!response.ok) {
       console.error("Resend error:", response.status, data);
-      return new Response(JSON.stringify({ error: "Send failed" }), {
+      return new Response(JSON.stringify({ error: data }), {
         status: 502,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
@@ -100,7 +67,7 @@ Deno.serve(async (req) => {
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
     console.error("send-newsletter-welcome failed:", message);
-    return new Response(JSON.stringify({ error: "Unexpected error" }), {
+    return new Response(JSON.stringify({ error: message }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
