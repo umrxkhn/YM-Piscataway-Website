@@ -32,7 +32,7 @@ const StayConnected = () => {
         </div>
 
         {/* Instagram-style post cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-6 max-w-7xl mx-auto">
           {instagramPosts.map((post, index) => (
             <a
               key={post.url}
@@ -42,23 +42,23 @@ const StayConnected = () => {
               className="group block overflow-hidden rounded-lg border border-primary/50 bg-card transition-all duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-[0_0_20px_2px_hsl(43_80%_50%/0.4)]"
             >
               {/* Header */}
-              <div className="flex items-center justify-between px-3 py-2.5">
-                <div className="flex items-center gap-2.5 min-w-0">
+              <div className="flex items-center justify-between px-2 py-1.5 sm:px-3 sm:py-2.5">
+                <div className="flex items-center gap-1.5 sm:gap-2.5 min-w-0">
                   <span className="inline-block rounded-full p-[2px] bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600">
-                    <span className="block rounded-full bg-card p-[2px]">
+                    <span className="block rounded-full bg-card p-[1px] sm:p-[2px]">
                       <img
                         src={ymLogo}
                         alt="YM Piscataway"
-                        className="h-7 w-7 rounded-full object-cover"
+                        className="h-4 w-4 sm:h-7 sm:w-7 rounded-full object-cover"
                         loading="lazy"
                       />
                     </span>
                   </span>
-                  <span className="truncate text-sm font-semibold text-foreground">
+                  <span className="truncate text-[10px] sm:text-sm font-semibold text-foreground">
                     ym.piscataway.brothers
                   </span>
                 </div>
-                <MoreHorizontal className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
+                <MoreHorizontal className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground" aria-hidden="true" />
               </div>
 
               {/* Image */}
@@ -72,15 +72,15 @@ const StayConnected = () => {
               />
 
               {/* Action row */}
-              <div className="flex items-center justify-between px-3 pt-3 pb-2">
-                <div className="flex items-center gap-3 text-foreground">
-                  <Heart className="h-5 w-5" aria-hidden="true" />
-                  <MessageCircle className="h-5 w-5" aria-hidden="true" />
-                  <Send className="h-5 w-5" aria-hidden="true" />
+              <div className="flex items-center justify-between px-2 pt-1.5 pb-1 sm:px-3 sm:pt-3 sm:pb-2">
+                <div className="flex items-center gap-2 sm:gap-3 text-foreground">
+                  <Heart className="h-3.5 w-3.5 sm:h-5 sm:w-5" aria-hidden="true" />
+                  <MessageCircle className="h-3.5 w-3.5 sm:h-5 sm:w-5" aria-hidden="true" />
+                  <Send className="h-3.5 w-3.5 sm:h-5 sm:w-5" aria-hidden="true" />
                 </div>
-                <Bookmark className="h-5 w-5 text-foreground" aria-hidden="true" />
+                <Bookmark className="h-3.5 w-3.5 sm:h-5 sm:w-5 text-foreground" aria-hidden="true" />
               </div>
-              <div className="px-3 pb-3 text-xs font-semibold text-foreground">
+              <div className="px-2 pb-2 text-[10px] sm:px-3 sm:pb-3 sm:text-xs font-semibold text-foreground">
                 View on Instagram
               </div>
             </a>
