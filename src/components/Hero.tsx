@@ -1,4 +1,5 @@
 import heroCollage from "@/assets/hero-collage.jpg";
+import heroCollageMobile from "@/assets/hero-collage-mobile.png";
 
 const Hero = () => {
   return (
@@ -6,11 +7,17 @@ const Hero = () => {
       id="home"
       className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-background"
     >
-      {/* Collage fills entire hero on all screen sizes */}
+      {/* Mobile collage */}
+      <img
+        src={heroCollageMobile}
+        alt="Young Muslims Piscataway community activities"
+        className="absolute inset-0 w-full h-full object-cover object-center md:hidden"
+      />
+      {/* Desktop collage */}
       <img
         src={heroCollage}
         alt="Young Muslims Piscataway community activities"
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className="absolute inset-0 w-full h-full object-cover object-center hidden md:block"
         width={1920}
         height={1080}
       />
