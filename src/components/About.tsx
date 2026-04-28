@@ -9,7 +9,7 @@ const pillars = [
   {
     icon: Heart,
     title: "Mentorship",
-    desc: "Leadership workshops, career guidance, and one-on-one mentoring to inspire the youth",
+    desc: "Leadership workshops, career guidance, and one-on-one mentoring for the youth",
   },
   {
     icon: BookOpen,
