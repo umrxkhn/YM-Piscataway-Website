@@ -54,7 +54,7 @@ Deno.serve(async (req) => {
     const data = await response.json();
     if (!response.ok) {
       console.error("Resend error:", response.status, data);
-      return new Response(JSON.stringify({ error: data }), {
+      return new Response(JSON.stringify({ error: "Email delivery failed" }), {
         status: 502,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
@@ -67,7 +67,7 @@ Deno.serve(async (req) => {
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
     console.error("send-newsletter-welcome failed:", message);
-    return new Response(JSON.stringify({ error: message }), {
+    return new Response(JSON.stringify({ error: "Internal server error" }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
