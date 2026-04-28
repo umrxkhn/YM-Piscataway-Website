@@ -2,11 +2,11 @@ import heroCollage from "@/assets/hero-collage.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen sm:min-h-screen flex items-center justify-center overflow-hidden">
       <img
         src={heroCollage}
         alt="Young Muslims Piscataway community activities"
-        className="absolute inset-0 w-full h-full object-contain object-center sm:object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-center scale-[2.2] sm:scale-100"
         width={1920}
         height={1080}
       />
