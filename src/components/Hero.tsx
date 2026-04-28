@@ -11,7 +11,7 @@ const Hero = () => {
       <img
         src={heroCollageMobile}
         alt="Young Muslims Piscataway community activities"
-        className="absolute inset-0 w-full h-full object-cover object-center md:hidden"
+        className="absolute inset-0 w-full h-full object-contain object-center md:hidden"
       />
       {/* Desktop collage */}
       <img
