@@ -27,7 +27,7 @@ const Navbar = () => {
           </button>
         </div>
         <a href="#home" className="justify-self-center flex items-center transition-all duration-200 hover:scale-110">
-          <img src={ymLogo} alt="YM Piscataway" className="h-10 w-10 object-contain hover:drop-shadow-[0_0_10px_hsl(43_80%_50%/0.8)] transition-all duration-200" />
+          <img src={ymLogo} alt="YM Piscataway" className="h-10 w-10 rounded-full object-cover hover:drop-shadow-[0_0_10px_hsl(43_80%_50%/0.8)] transition-all duration-200" />
         </a>
         <a
           href="#contact"
