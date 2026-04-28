@@ -36,7 +36,7 @@ const Donate = () => {
         </a>
 
         <h3 className="font-heading text-2xl font-semibold text-foreground mb-5">
-          Other Ways To Give Back
+          Other Ways To Contribute
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {paymentMethods.map((method) => (
