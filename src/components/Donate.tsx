@@ -11,7 +11,7 @@ const paymentMethods = [
   },
   {
     name: "Venmo",
-    details: "@YM_Piscataway",
+    details: "YM_Piscataway",
   },
 ];
 
