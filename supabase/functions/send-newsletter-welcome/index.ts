@@ -14,12 +14,39 @@ Deno.serve(async (req) => {
     const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
     if (!RESEND_API_KEY) throw new Error("RESEND_API_KEY is not configured");
 
+    const RESEND_AUDIENCE_ID = Deno.env.get("RESEND_AUDIENCE_ID");
+
     const { email } = await req.json();
     if (!email || typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return new Response(JSON.stringify({ error: "Invalid email" }), {
         status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
+    }
+
+    const gatewayHeaders = {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${LOVABLE_API_KEY}`,
+      "X-Connection-Api-Key": RESEND_API_KEY,
+    };
+
+    // Add contact to Resend audience (non-blocking for the welcome email)
+    if (RESEND_AUDIENCE_ID) {
+      try {
+        const contactRes = await fetch(`${GATEWAY_URL}/audiences/${RESEND_AUDIENCE_ID}/contacts`, {
+          method: "POST",
+          headers: gatewayHeaders,
+          body: JSON.stringify({ email, unsubscribed: false }),
+        });
+        if (!contactRes.ok) {
+          const errBody = await contactRes.text();
+          console.error("Resend audience add failed:", contactRes.status, errBody);
+        }
+      } catch (e) {
+        console.error("Resend audience add threw:", e instanceof Error ? e.message : e);
+      }
+    } else {
+      console.warn("RESEND_AUDIENCE_ID not configured; skipping audience sync");
     }
 
     const html = `
@@ -38,11 +65,7 @@ Deno.serve(async (req) => {
 
     const response = await fetch(`${GATEWAY_URL}/emails`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${LOVABLE_API_KEY}`,
-        "X-Connection-Api-Key": RESEND_API_KEY,
-      },
+      headers: gatewayHeaders,
       body: JSON.stringify({
         from: "YM Piscataway <onboarding@resend.dev>",
         to: [email],
