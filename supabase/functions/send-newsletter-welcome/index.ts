@@ -51,12 +51,12 @@ Deno.serve(async (req) => {
 
     const html = `
       <div style="font-family: Arial, sans-serif; background:#000; color:#fff; padding:32px; border-radius:12px; max-width:560px; margin:auto;">
-        <h1 style="color:#D4A843; margin:0 0 16px;">Thanks for subscribing!</h1>
+        <h1 style="color:#D4A843; margin:0 0 16px;">Thank you for subscribing!</h1>
         <p style="color:#ddd; line-height:1.6; margin:0 0 16px;">
-          You're now signed up for the <strong>YM Piscataway</strong> newsletter. Expect updates on our latest events, halaqas, retreats, and community service opportunities.
+          Thank you for subscribing to <strong>Young Muslims Piscataway's</strong> newsletter. You'll receive updates on our latest events, halaqas, retreats, and community service opportunities.
         </p>
         <p style="color:#aaa; line-height:1.6; margin:0 0 24px;">
-          We're excited to have you with us. Stay tuned!
+          We're excited to have you with us
         </p>
         <hr style="border:none; border-top:1px solid #333; margin:24px 0;" />
         <p style="color:#888; font-size:12px; margin:0;">YM Piscataway — Brothers building community</p>
@@ -67,9 +67,9 @@ Deno.serve(async (req) => {
       method: "POST",
       headers: gatewayHeaders,
       body: JSON.stringify({
-        from: "YM Piscataway <onboarding@resend.dev>",
+        from: "Young Muslims Piscataway <onboarding@resend.dev>",
         to: [email],
-        subject: "Thanks for subscribing to the YM Piscataway newsletter",
+        subject: "Thank you for subscribing to Young Muslims Piscataway's newsletter",
         html,
       }),
     });
